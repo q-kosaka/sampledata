@@ -1,0 +1,36 @@
+
+@mixin btn( $liquid , $skin ){
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  a{
+    color:#fff;
+    display: block;
+    @include font-size( 1.4 );
+  }
+
+  @if $skin == $primary{
+    a{
+      background-color: $primary;
+    }
+  }
+
+  @if $liquid {
+    width: auto;
+    height: auto;
+
+    a{
+      min-width: 200px;
+      padding: 10px 20px;
+      line-height: 1.4;
+    }
+  } @else {
+    width: 250px;
+    height:45px;
+
+    a{
+      line-height: 45px;
+    }
+  }
+}
