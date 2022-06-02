@@ -10,13 +10,38 @@
   } 
 _%>  
 <%_ data.asset = function(){ _%> 
-<script type="text/javascript">
-</script> 
+
 <%_ }; data.content = function(){ _%>
-<div class="content">
-  いいい
-  コンテンツの内容はここに
-</div>
+<main>
+  <div>
+    <dl>
+      <div>
+        <dt>userAgentData取れているかどうか</dt>
+        <dd id="text"></dd>
+      </div>
+      <div>
+        <dt>navigator.userAgent</dt>
+        <dd id="uatext"></dd>
+      </div>
+      <div>
+        <dt>navigator.userAgentData</dt>
+        <dd id="uadtext"></dd>
+      </div>
+      <div>
+        <dt>navigator.userAgentData.platform</dt>
+        <dd id="uadtext1"></dd>
+      </div>
+      <div>
+        <dt>navigator.userAgentData.brands</dt>
+        <dd id="uadtext2"></dd>
+      </div>
+      <div>
+        <dt>navigator.userAgentData.mobile</dt>
+        <dd id="uadtext3"></dd>
+      </div>
+    </dl>
+  </div>
+</main>
 <%_ } _%> 
 <%_ /* 以下includeファイル */ _%>
 <%- include( data.current + 'includes/_head_' + data.device , { data : data } ); %>
