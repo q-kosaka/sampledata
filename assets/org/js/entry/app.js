@@ -1,4 +1,13 @@
+//httpアクセスの場合httpsへリダイレクト
+const nowUrl = location.href
+if(nowUrl.indexOf('http:') >= 0) { // urlの中にhttp:があれば
+  var resetUrl = nowUrl.replace('http:', 'https:'); // 書き換え方法の修正
+  location.replace(resetUrl);// リダイレクト
+}
+
+//userAgentData取得
 const agent = navigator.userAgent;//UA取得　末尾に『.toLowerCase()』をつけると小文字に変換
+const nontext = '取得出来ず'
 let text = document.getElementById('text');
 let uatext = document.getElementById('uatext');
 let uadtext = document.getElementById('uadtext');
@@ -24,8 +33,8 @@ if ('userAgentData' in navigator) {
     // userAgentData が無効なので、既存のユーザーエージェント判定をする
     text.innerHTML = '取得出来ていない';
     uatext.innerHTML = agent;
-    uadtext.innerHTML = '取得出来ず';
-    uadtext1.innerHTML = '取得出来ず';
-    uadtext2.innerHTML = '取得出来ず';
-    uadtext3.innerHTML = '取得出来ず';
+    uadtext.innerHTML = nontext;
+    uadtext1.innerHTML = nontext;
+    uadtext2.innerHTML = nontext;
+    uadtext3.innerHTML = nontext;
 }

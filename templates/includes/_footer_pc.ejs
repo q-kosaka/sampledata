@@ -1,3 +1,7 @@
 フッターです
 
+<% if(data.name == 'top'){ %>
 <script src="<%= data.current %>assets/js/app.js?<%= DATE %>"></script>
+<% } else if(data.name == 'canvas'){ %>
+<script src="<%= data.current %>assets/js/app2.js?<%= DATE %>"></script>
+<% } %>

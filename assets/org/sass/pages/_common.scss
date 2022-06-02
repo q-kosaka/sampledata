@@ -10,3 +10,13 @@ dt {
 dd {
   margin-bottom:20px;
 }
+
+canvas {
+  border: 1px solid silver;
+}
+div {
+  margin-bottom:20px;
+  & p {
+    margin-bottom:10px;
+  }
+}
