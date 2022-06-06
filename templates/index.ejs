@@ -10,38 +10,28 @@
   } 
 _%>  
 <%_ data.asset = function(){ _%> 
-
 <%_ }; data.content = function(){ _%>
 <main>
-  <div>
-    <dl>
-      <div>
-        <dt>userAgentData取れているかどうか</dt>
-        <dd id="text"></dd>
-      </div>
-      <div>
-        <dt>navigator.userAgent</dt>
-        <dd id="uatext"></dd>
-      </div>
-      <div>
-        <dt>navigator.userAgentData</dt>
-        <dd id="uadtext"></dd>
-      </div>
-      <div>
-        <dt>navigator.userAgentData.platform</dt>
-        <dd id="uadtext1"></dd>
-      </div>
-      <div>
-        <dt>navigator.userAgentData.brands</dt>
-        <dd id="uadtext2"></dd>
-      </div>
-      <div>
-        <dt>navigator.userAgentData.mobile</dt>
-        <dd id="uadtext3"></dd>
-      </div>
-    </dl>
+  <div class="t-mv">
+    <img src="https://placehold.jp/d6d6d6/808080/500x300.png?text=image" alt="メインビジュアル">
+  </div>
+  <div class="t-content">
+    <div>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p><a href="ua.html">UAチェック</a></p>
+    </div>
+    <div><img src="https://placehold.jp/d6d6d6/808080/500x300.png?text=image"></div>
+  </div>
+  <div class="t-content">
+    <div>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p><a href="canvas.html">canvasチェック</a></p>
+    </div>
+    <div><img src="https://placehold.jp/d6d6d6/808080/500x300.png?text=image"></div>
   </div>
 </main>
+
 <%_ } _%> 
 <%_ /* 以下includeファイル */ _%>
 <%- include( data.current + 'includes/_head_' + data.device , { data : data } ); %>

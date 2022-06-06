@@ -1,1 +1,45 @@
-ヘッダーです
+<header>
+    <div class="h-logo">
+    <% if(data.name == 'top'){ %>
+        <h1>ロゴエリア</h1>
+    <% } else { %>
+        <p>ロゴエリア</p>
+    <% } %>
+    </div>
+    <div class="header-menuBox"></div>
+    <nav>
+        <ul class="h-menu">
+            <li><a href="ua.html">UAチェック</a></li>
+            <li><a href="canvas.html">canvasチェック</a></li>
+            <li><a href="">メニューC</a>
+                <div class="h-submenu">
+                    <ul>
+                        <li><a href="">サブメニューA</a></li>
+                        <li><a href="">サブメニューB</a></li>
+                        <li><a href="">サブメニューC</a></li>
+                        <li><a href="">サブメニューD</a></li>
+                        <li><a href="">サブメニューE</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="">メニューD</a>
+                <div class="h-submenu">
+                    <ul>
+                        <li><a href="">サブメニューA</a></li>
+                        <li><a href="">サブメニューB</a></li>
+                        <li><a href="">サブメニューC</a></li>
+                        <li><a href="">サブメニューD</a></li>
+                        <li><a href="">サブメニューE</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="">メニューE</a></li>
+            <li><a href="">メニューF</a></li>
+        </ul>
+    </nav>
+    <div class="h-spNavi">
+        <button class="h-spBtn">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+        </button>
+    </div>
+</header>

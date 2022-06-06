@@ -1,7 +1,11 @@
-フッターです
+<footer>
+    &copy; YYYY XXXXXXXXX 
+</footer>
 
-<% if(data.name == 'top'){ %>
+<% if(data.name == 'ua'){ %>
 <script src="<%= data.current %>assets/js/app.js?<%= DATE %>"></script>
 <% } else if(data.name == 'canvas'){ %>
 <script src="<%= data.current %>assets/js/app2.js?<%= DATE %>"></script>
+<% } else { %>
+<script src="<%= data.current %>assets/js/app3.js?<%= DATE %>"></script>
 <% } %>

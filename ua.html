@@ -8,9 +8,9 @@
   <link rel="canonical" href="https://testdata.localdev.com">
   <meta name="description" content="サイトデスクリプション">
   <meta name="keywords" content="サイトキーワード">
-  <link rel="stylesheet" href="./assets/css/style.css?1654246198451">
+  <link rel="stylesheet" href="./assets/css/style.css?1654246198558">
 </head>
-<body id="canvas">
+<body id="ua">
   <header>
     <div class="h-logo">
       <p>ロゴエリア</p>
@@ -55,22 +55,36 @@
     </div>
   </header>
   <main class="content">
-    <canvas id="imageBox" width="1200px" height="1800px"></canvas>
-    <div><a id="makeimage">画像作成</a></div>
-    <div></div>
     <div>
-      <p>dataURL（Chrome系+スマホのブラウザだと画像パス開けない）</p>
-      <p><a id="download">画像ダウンロード</a></p>
-      <p></p><a id="download_dataURL" target="_blank">画像パス</a>
-      <p></p>
-    </div>
-    <div>
-      <p>blob（Chrome系+スマホのブラウザでも画像パス開ける）</p>
-      <p><a id="download_blob">画像ダウンロード</a></p>
-      <p><a id="download_blobURL" target="_blank">画像パス</a></p>
+      <dl>
+        <div>
+          <dt>userAgentData取れているかどうか</dt>
+          <dd id="text"></dd>
+        </div>
+        <div>
+          <dt>navigator.userAgent</dt>
+          <dd id="uatext"></dd>
+        </div>
+        <div>
+          <dt>navigator.userAgentData</dt>
+          <dd id="uadtext"></dd>
+        </div>
+        <div>
+          <dt>navigator.userAgentData.platform</dt>
+          <dd id="uadtext1"></dd>
+        </div>
+        <div>
+          <dt>navigator.userAgentData.brands</dt>
+          <dd id="uadtext2"></dd>
+        </div>
+        <div>
+          <dt>navigator.userAgentData.mobile</dt>
+          <dd id="uadtext3"></dd>
+        </div>
+      </dl>
     </div>
   </main>
   <footer> &copy; YYYY XXXXXXXXX </footer>
-  <script src="./assets/js/app2.js?1654246198451"></script>
+  <script src="./assets/js/app.js?1654246198558"></script>
 </body>
 </html>

@@ -32,13 +32,14 @@ for (var i in imgs) { //画像配置
     }, false);
 }
 
+//dataURL（base64）からblobへ変換
 function toBlob(base64) {
-	const byteString = atob(base64.replace(/^.*,/, ''));
-	const content = new Uint8Array(byteString.length);
+	const byteString = atob(base64.replace(/^.*,/, '')); //base64をデコード
+	const content = new Uint8Array(byteString.length); //8 ビット符号なし整数値の配列を生成
 	for (var i = 0; i < byteString.length; i++) {
 		content[i] = byteString.charCodeAt(i);
 	}
-	const blob = new Blob([content], {type: 'image/png'});
+	const blob = new Blob([content], {type: 'image/png'}); //blobを作成
 	return blob;
 }
 

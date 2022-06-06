@@ -1,0 +1,139 @@
+img {
+    width: 100%;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;;
+}
+header {
+    background:green;
+    height: 50px;
+    font-size: 1.6rem;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include media( pc ){
+        justify-content: flex-start;
+    }
+}
+.h-logo {
+    line-height: 50px;
+    color: #fff;
+    width: 200px;
+}
+.h-menu {
+    line-height: 50px;
+    color: #fff;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    z-index: 10;
+    background: #eaeaea;
+    @include media( pc ){
+        display: flex;
+        opacity: 1;
+        background: none;
+        position: static;
+        height: auto;
+    }
+    &.open {
+        display: block;
+        opacity: 1;
+    }
+    & li {
+        padding:0;
+    }
+    & a {
+        color: #666;
+        display: block;
+        padding:0 20px;
+        line-height: 50px;
+        border-bottom:solid 1px #9f9f9f;
+        @include media( pc ){
+            color: #fff;
+            border-bottom:none;
+        }
+    }
+}
+.h-submenu {
+    opacity: 0;
+    display: none;
+    &.open {
+        display: block;
+        opacity: 1;
+    }
+}
+.h-spNavi {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #45322c;
+    @include media( pc ){
+        display: none;
+    }
+}
+.h-spBtn {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0;
+    z-index: 20;
+    background: none;
+    & span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        position: absolute;
+        right: 10px;
+        transition: .5s ease;
+    }
+    & .bar1 {
+        top: 14px;
+    }
+    &.open .bar1 {
+        top: 24px;
+        transform: rotate(-45deg);
+        background: #fff;
+    }
+    & .bar2 {
+        top: 23px;
+    }
+    &.open .bar2 {
+        opacity: 0;
+    }
+    & .bar3 {
+        bottom: 14px;
+    }
+    &.open .bar3 {
+        top: 24px;
+        transform: rotate(45deg);
+        background: #fff;
+    }
+}
+main {
+    width: 100%;
+    z-index: 1;
+}
+.t-mv {
+    width: 100%;
+}
+.t-content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    background: #45322c;
+    color: #fff;
+    font-size: 1.2rem;
+    height: 30px;
+    line-height: 30px;
+}
