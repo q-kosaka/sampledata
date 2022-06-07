@@ -21,3 +21,9 @@ div {
     margin-bottom:10px;
   }
 }
+h2 {
+//  font-size:clamp(1.2rem, -0.595rem + 7.66vw, 4rem);
+  font-size:clamp(1.8rem, -6.057rem + 16.76vw, 4rem);
+  font-weight:bold;
+  margin-bottom:40px;
+}
