@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>サイトタイトル</title>
+  <link rel="canonical" href="https://testdata.localdev.com">
+  <meta name="description" content="サイトデスクリプション">
+  <meta name="keywords" content="サイトキーワード">
+  <link rel="stylesheet" href="./assets/css/style.css?1654667403885">
+</head>
+<body id="canvas">
+  <header>
+    <div class="h-logo">
+      <p>ロゴエリア</p>
+    </div>
+    <div class="header-menuBox"></div>
+    <nav>
+      <ul class="h-menu">
+        <li><a href="ua.html">UAチェック</a></li>
+        <li><a href="canvas.html">canvasチェック</a></li>
+        <li><a href="">メニューC</a>
+          <div class="h-submenu">
+            <ul>
+              <li><a href="">サブメニューA</a></li>
+              <li><a href="">サブメニューB</a></li>
+              <li><a href="">サブメニューC</a></li>
+              <li><a href="">サブメニューD</a></li>
+              <li><a href="">サブメニューE</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="">メニューD</a>
+          <div class="h-submenu">
+            <ul>
+              <li><a href="">サブメニューA</a></li>
+              <li><a href="">サブメニューB</a></li>
+              <li><a href="">サブメニューC</a></li>
+              <li><a href="">サブメニューD</a></li>
+              <li><a href="">サブメニューE</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="">メニューE</a></li>
+        <li><a href="">メニューF</a></li>
+      </ul>
+    </nav>
+    <div class="h-spNavi">
+      <button class="h-spBtn">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+      </button>
+    </div>
+  </header>
+  <main class="content">
+    <canvas id="imageBox" width="1200px" height="1800px"></canvas>
+    <div><a id="makeimage">画像作成</a></div>
+    <div></div>
+    <div>
+      <p>dataURL（Chrome系+スマホのブラウザだと画像パス開けない）</p>
+      <p><a id="download">画像ダウンロード</a></p>
+      <p></p><a id="download_dataURL" target="_blank">画像パス</a>
+      <p></p>
+    </div>
+    <div>
+      <p>blob（Chrome系+スマホのブラウザでも画像パス開ける）</p>
+      <p><a id="download_blob">画像ダウンロード</a></p>
+      <p><a id="download_blobURL" target="_blank">画像パス</a></p>
+    </div>
+  </main>
+  <footer>
+    <a href="#title">&copy; YYYY XXXXXXXXX </a>
+  </footer>
+  <script src="./assets/js/app2.js?1654667403885"></script>
+</body>
+</html>
