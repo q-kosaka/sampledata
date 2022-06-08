@@ -3,7 +3,7 @@ name: run Lighthouse CI
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
