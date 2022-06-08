@@ -19,6 +19,7 @@ header {
     }
     position:sticky;
     top:0;
+    z-index: 10;
 }
 .h-logo {
     line-height: 50px;
@@ -131,7 +132,6 @@ main {
     width: 95%;
     margin: 0 auto;
 }
-
 footer{
     text-align: center;
     background: #45322c;
@@ -142,4 +142,13 @@ footer{
     & a {
         color: #fff;
     }
+}
+
+.all {
+    filter: drop-shadow(0 0 30px #ed86b4);
+    z-index: 0;
+}
+.drop {
+    filter: drop-shadow(10px 10px 10px #777);
+    z-index: 0;
 }
