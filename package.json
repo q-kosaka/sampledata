@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npm bin http-server"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  }
+  
+}
