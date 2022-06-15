@@ -1,0 +1,1 @@
+!function(){var t=new IntersectionObserver((function(t){t.forEach((function(t){t.isIntersecting?t.target.classList.add("active"):t.target.classList.remove("active")}))}),e),e={root:null,rootMargin:"0px",threshold:[0,1]};document.querySelectorAll(".t-content").forEach((function(e){t.observe(e)}))}();

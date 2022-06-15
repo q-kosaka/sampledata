@@ -1,0 +1,46 @@
+<%_
+  var data = {
+    url: '',/* スラッシュ始まりのドメイン以下URL ( TOPの場合は空文字で ) */
+    name: 'top',/* bodyタグにつくid名 */
+    title:'',/* TOPの場合は空文字で */
+    description:'',/* TOPの場合は空文字で */
+    keyword:'',/* TOPの場合は空文字で */
+    device: 'pc', 
+    current:'./'   
+  } 
+_%>  
+<%_ data.asset = function(){ _%> 
+<%_ }; data.content = function(){ _%>
+<main>
+  <div class="t-mv">
+    <img src="https://placehold.jp/d6d6d6/808080/500x300.png?text=image" alt="メインビジュアル">
+  </div>
+  <div class="t-content">
+    <div>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p><a href="ua.html">UAチェック</a></p>
+    </div>
+    <div><img src="./assets/images/card_04_A.png"></div>
+  </div>
+  <div class="t-content">
+    <div>
+      <p>テキスト表示テキスト表示テキスト表示テキスト表示</p>
+      <p><a href="canvas.html">canvasチェック</a></p>
+    </div>
+    <div><img src="./assets/images/card_04_A_b.png" class="all"></div>
+    <div><img src="./assets/images/card_04_A_b.png" class="drop"></div>
+    <div><img src="./assets/images/card_04_A_b.png" class="drop_b"></div>
+  </div>
+</main>
+<script>
+
+
+</script>
+<%_ } _%> 
+<%_ /* 以下includeファイル */ _%>
+<%- include( data.current + 'includes/_head_' + data.device , { data : data } ); %>
+<%- data.content(); %>
+<%- include( data.current + 'includes/_footer_' + data.device , { data : data } ); %>
+<%- data.asset(); %>
+<%- include( data.current + 'includes/_foot_' + data.device , { data : data } ); %>
