@@ -23,7 +23,9 @@
 /*
  +	partsのimportはここで呼び出す
  */
-@import "pages/**/*";
+//@import "pages/**/*";
+@import "pages/common";
+@import "pages/top";
 
 /*
  +	pageのimportはここで呼び出す

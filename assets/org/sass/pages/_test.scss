@@ -1,0 +1,201 @@
+img {
+    width: 100%;
+}
+body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;;
+}
+/*ヘッダー*/
+.h_ {
+    &header {
+        background:#fff;
+        height: getSize(120)+'vw';
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 0 getSize(40)+'vw';
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position:sticky;
+        top:0;
+        z-index: 10;
+        box-shadow: 0px 3px 3px 0 rgba(100,100,100,0.1);
+        @include media( pc ){
+            height: 60px;
+            padding: 0 20px;
+        }
+    }
+    &logo {
+        width: auto;
+        margin-top: getSize(20)+'vw';
+        @include media( pc ){
+            margin-top: 10px;
+        }
+    }
+    &logoImg {
+        height: getSize(80)+'vw';
+        @include media( pc ){
+            height: 40px;
+        }
+    }
+    &menuBack{
+        display: none;
+    }
+    &menuBox {
+        display: none;
+    }
+
+    &spNavi {
+        display: block;
+        position: relative;
+        height: getSize(120)+'vw';
+        width: getSize(120)+'vw';
+        background: $primary;
+        right: getSize(-40)+'vw';
+        @include media( pc ){
+            display: none;
+        }
+    }
+    &spBtn {
+        height: getSize(120)+'vw';
+        width: getSize(120)+'vw';
+        position: absolute;
+        right: 0;
+        z-index: 20;
+        background: none;
+        & span {
+            display: block;
+            width: getSize(60)+'vw';
+            height: getSize(8)+'vw';
+            background: #fff;
+            position: absolute;
+            right: getSize(30)+'vw';
+            transition: .5s ease;
+            border-radius: 100vw;
+        }
+    }
+    &bar1 {
+        top: getSize(34)+'vw';
+    }
+    .open &bar1 {
+        top: getSize(58)+'vw';
+        transform: rotate(-45deg);
+        background: #fff;
+    }
+    &bar2 {
+        top: getSize(56)+'vw';
+    }
+    .open &bar2 {
+        opacity: 0;
+    }
+    &bar3 {
+        bottom: getSize(34)+'vw';
+    }
+    .open &bar3 {
+        top: getSize(58)+'vw';
+        transform: rotate(45deg);
+        background: #fff;
+    }
+}
+/*トップページ*/
+.t_ {
+    /*キービジュアル*/
+    &kv {
+        height: calc(100vh - 16vw);
+        text-align: center;
+        background: $primary-s;
+        @include media( pc ){
+            height: calc(100vh - 60px);
+        }
+    }
+    &kv_textBox {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        height:100%;
+    }
+    &kv_copy {
+        font-size: 3rem;
+        width: 100%;
+        @include media( pc ){
+            font-size: 30px;
+        }
+    }
+    &kv_read {
+        font-size: 1.6rem;
+        margin-top: getSize(200)+'vw';
+        width: 100%;
+        @include media( pc ){
+            font-size: 16px;
+            margin-top: 100px;
+        }
+    }
+    /*リード*/
+    &read{
+        background: $blue;
+        color: #fff;
+        padding: 10vw 5vw;
+        font-size: 1.6rem;
+        @include media( pc ){
+            padding: 80px 0;
+            font-size: 16px;
+        }
+    }
+    &readBox {
+        width: 100%;
+        @include media( pc ){
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+        }
+    }
+    &read_textBox{
+        text-align: right;
+        margin-bottom: 10vw;
+        @include media( pc ){
+            width: 50%;
+            padding-right: 50px;
+            margin-bottom: 10px;
+        }
+        & p {
+            text-align: left;
+            margin-bottom: 5vw;
+            @include media( pc ){
+                margin-bottom: 20px;
+            }
+        }
+        & a {
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            padding-right: 5vw;
+            text-decoration: underline;
+            @include media( pc ){
+                padding-right: 15px;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                border-top: solid 2px #fff;
+                border-right: solid 2px #fff;
+                width: getSize(16)+'vw';
+                height: getSize(16)+'vw';
+                transform: rotate(45deg);
+                top: 30%;
+                @include media( pc ){
+                    width: 10px;
+                    height: 10px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &read_imgBox{
+        border-radius: 3vw;
+        overflow: hidden;
+        @include media( pc ){
+            width: 50%;
+        }
+    }
+}

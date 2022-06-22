@@ -1,1 +1,48 @@
-!function(){var e=location.href;if(e.indexOf("http:")>=0){var n=e.replace("http:","https:");location.replace(n)}var t=navigator.userAgent,r="取得出来ず",a=document.getElementById("text"),i=document.getElementById("uatext"),d=document.getElementById("uadtext"),o=document.getElementById("uadtext1"),u=document.getElementById("uadtext2"),m=document.getElementById("uadtext3");if("userAgentData"in navigator){var c=navigator.userAgentData,l=c.brands,g="";l.forEach((function(e){g+=e.brand+","})),a.innerHTML="取得出来ている",i.innerHTML=t,d.innerHTML=c,o.innerHTML=c.platform,u.innerHTML=g,m.innerHTML=c.mobile}else a.innerHTML="取得出来ていない",i.innerHTML=t,d.innerHTML=r,o.innerHTML=r,u.innerHTML=r,m.innerHTML=r}();
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+//httpアクセスの場合httpsへリダイレクト
+var nowUrl = location.href;
+
+if (nowUrl.indexOf('http:') >= 0) {
+  // urlの中にhttp:があれば
+  var resetUrl = nowUrl.replace('http:', 'https:'); // 書き換え方法の修正
+
+  location.replace(resetUrl); // リダイレクト
+} //userAgentData取得
+
+
+var agent = navigator.userAgent; //UA取得　末尾に『.toLowerCase()』をつけると小文字に変換
+
+var nontext = '取得出来ず';
+var text = document.getElementById('text');
+var uatext = document.getElementById('uatext');
+var uadtext = document.getElementById('uadtext');
+var uadtext1 = document.getElementById('uadtext1');
+var uadtext2 = document.getElementById('uadtext2');
+var uadtext3 = document.getElementById('uadtext3');
+
+if ('userAgentData' in navigator) {
+  // userAgentData が有効なので、userAgentDataで判定をする
+  var useAgentData = navigator.userAgentData;
+  var useAgentDatabrand = useAgentData.brands;
+  var browser = '';
+  useAgentDatabrand.forEach(function (brand_data) {
+    browser += brand_data.brand + ',';
+  });
+  text.innerHTML = '取得出来ている';
+  uatext.innerHTML = agent;
+  uadtext.innerHTML = useAgentData;
+  uadtext1.innerHTML = useAgentData.platform;
+  uadtext2.innerHTML = browser;
+  uadtext3.innerHTML = useAgentData.mobile;
+} else {
+  // userAgentData が無効なので、既存のユーザーエージェント判定をする
+  text.innerHTML = '取得出来ていない';
+  uatext.innerHTML = agent;
+  uadtext.innerHTML = nontext;
+  uadtext1.innerHTML = nontext;
+  uadtext2.innerHTML = nontext;
+  uadtext3.innerHTML = nontext;
+}
+/******/ })()
+;

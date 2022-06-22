@@ -130,7 +130,7 @@ main {
 }
 .t-content {
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
 }
 footer{
     text-align: center;
@@ -144,6 +144,13 @@ footer{
     }
 }
 
+.card {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #9f9f9f;
+    margin-bottom: 20px;
+}
 .all {
     filter: drop-shadow(0 0 30px #ed86b4);
     z-index: 0;
@@ -151,4 +158,13 @@ footer{
 .drop {
     filter: drop-shadow(10px 10px 10px #777);
     z-index: 0;
+}
+
+#aaa {
+    overflow: hidden;
+    height: 80vw;
+    overflow-y: scroll;
+    border: solid 3px #000;
+    width: 90%;
+    margin: 0 auto;
 }

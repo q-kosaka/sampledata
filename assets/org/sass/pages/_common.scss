@@ -27,3 +27,13 @@ h2 {
   font-weight:bold;
   margin-bottom:40px;
 }
+
+.sample {
+  width: getSize(636, 750) + "vw";
+}
+.sample2 {
+  width: getSize(1950) + "vw";
+}
+.sample3 {
+  width: getSize(1950,750) + "vw";
+}

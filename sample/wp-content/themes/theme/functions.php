@@ -116,6 +116,57 @@ function getting_description() {
 	return $return;
 }
 
+function custom_allowed_block_types($select_allowed_blocks, $post) {
+	if($post->post_type === 'post'){//投稿
+		$select_allowed_blocks = array(
+        	'core/paragraph', // 段落
+			'core/heading', // 見出し
+			'core/image', // 画像
+			'core/shortcode', // ショートコード
+            'core/freeform', // クラシック
+		);
+	}elseif($post->post_type === 'page'){//固定ページ
+		$select_allowed_blocks = array(
+        	'core/html', // カスタムHTML
+		);
+	}elseif($post->post_type === 'news'){//カスタム投稿
+		$select_allowed_blocks = array(
+        	'core/paragraph', // 段落
+			'core/heading', // 見出し
+        	'core/html', // カスタムHTML
+		);
+	}else{
+		$select_allowed_blocks = array(
+        	'core/paragraph', // 段落
+			'core/heading', // 見出し
+			'core/image', // 画像
+			'core/shortcode', // ショートコード
+            'core/freeform', // クラシック
+		);
+	}
+    return $select_allowed_blocks;
+}
+add_filter('allowed_block_types', 'custom_allowed_block_types', 10, 10);
+/*
+各ブロックのスラッグは下記に記載
+https://www.evernote.com/shard/s342/sh/4b45c4bb-867b-51ac-24ef-0a5ce6938383/1d2cba96d0d30e5f100fd1fe5c56f5e3
+*/
+
+function disable_block_editor( $use_block_editor, $post_type ) {
+  if ( $post_type === 'news' ) return false;
+  return $use_block_editor;
+}
+add_filter( 'use_block_editor_for_post_type', 'disable_block_editor', 10, 2 );
+
+
+/*function custom_allowed_block_types($allowed_blocks, $post) {
+	return array(
+	    'core/html', // カスタムHTML
+	);
+}
+add_filter('allowed_block_types', 'custom_allowed_block_types', 10, 10);
+*/
+
 /*
 //カスタムタクソノミーのURLをカスタム投稿名と同じにする
 function my_custom_post_type_permalinks_set($termlink, $term, $taxonomy){

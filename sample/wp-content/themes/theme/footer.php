@@ -9,7 +9,7 @@
     </div>
 </footer>
 
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js?<?php echo strtotime("now"); ?>"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/app3.js?<?php echo strtotime("now"); ?>"></script>
 	<?php wp_footer(); ?>
 	</body>
 </html>

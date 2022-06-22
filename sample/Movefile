@@ -1,0 +1,63 @@
+global:
+  sql_adapter: default
+
+local:
+  vhost: "https://testdata.localdev.com/"
+  wordpress_path: "/var/www/html/testdata/sample/"
+
+  database:
+    name: "sample"
+    user: "root"
+    password: "root"
+    host: "db"
+
+test:
+  vhost: "https://kosaka.dev.web.qtoa.jp/"
+  wordpress_path: "/var/docker/mounts/documentRoot/kosaka/" # use an absolute path here
+
+  database:
+    name: "kosaka"
+    user: "root"
+    password: "58bc2b41eda37c0cb6c167c151c9261b"
+    host: "127.0.0.1"
+    charset: "utf8mb4"
+    port: "3307"
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-content/*.sql"
+    - "wp-config.php"
+    - ".htaccess"
+    - ".htpasswd"
+    - "php.cgi"
+
+  # paths: # you can customize wordpress internal paths
+  #   wp_content: "wp-content"
+  #   uploads: "wp-content/uploads"
+  #   plugins: "wp-content/plugins"
+  #   themes: "wp-content/themes"
+  #   languages: "wp-content/languages"
+  #   themes: "wp-content/themes"
+
+  ssh:
+    host: "ec2-52-69-231-244.ap-northeast-1.compute.amazonaws.com"
+    user: "q-util"
+    rsync_options: "--verbose" # Additional rsync options, optional
+  #   gateway: # Gateway is optional
+  #     host: "host"
+  #     user: "user"
+  #     password: "password" # password is optional, will use public keys if available.
+
+  #ftp:
+  #  user: "q_sakura"
+  #  password: "8Twbw8fB"
+  #  host: "160.16.91.249"
+  #  passive: true
+
+# production: # multiple environments can be specified
+#   [...]
