@@ -1,7 +1,10 @@
 /*
  +	共通で使うmixinはここにまとめる
  */
-
+@mixin contentWidth {
+  width: 100%;
+  padding: 10vw 5vw;
+}
 @mixin clearfix{
   &:after{
     display: table;
@@ -78,4 +81,37 @@
       border-color: transparent $color transparent transparent;
   }
   border-style: solid;
+}
+
+@mixin greenBtn($btWidht: 80vw) {
+  text-align: center;
+        width: $btWidht;
+        margin: 0 auto;
+        background: linear-gradient(to right, #aadd00 0%,#44aa00 100%);
+        display: block;
+        height: getSize(120)+'vw';
+        line-height: getSize(120)+'vw';
+        color: #fff;
+        border-radius: 1.5vw;
+        position: relative;
+        @include media( pc ){
+            width: 500px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 10px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            border-top: solid 2px #fff;
+            border-right: solid 2px #fff;
+            width: getSize(16)+'vw';
+            height: getSize(16)+'vw';
+            transform: rotate(45deg);
+            top: 42%;
+            @include media( pc ){
+                width: 10px;
+                height: 10px;
+            }
+        }
 }

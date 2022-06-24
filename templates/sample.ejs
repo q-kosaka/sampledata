@@ -13,13 +13,13 @@ _%>
 <%_ }; data.content = function(){ _%>
 <main>
     <section class="t_kv">
-        <div class="t_kv_textBox">
-            <h2 class="t_kv_copy">キャッチコピーが入ります。</h2>
+        <div class="t_kvInner">
+            <h2 class="t_kv_copy">キャッチコピーが<br class="sponly">入ります。</h2>
             <p class="t_kv_read">リード文が入ります。リード文が入ります。<br>リード文が入ります。<br>リード文が入ります。リード文が入ります。</p>
         </div>
     </section>
     <div class="t_read">
-        <div class="t_readBox">
+        <div class="t_readInner">
             <div class="t_read_textBox">
                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
@@ -30,123 +30,125 @@ _%>
             </div>
         </div>
     </div>
-    <section>
-        <div>
-            <p>Servise</p>
-            <h2>サービスを探す</h2>
+    <section class="t_service">
+        <div class="t_service_titleBox">
+            <p class="t_service_subTitle">Servise</p>
+            <h2 class="t_service_title">サービスを探す</h2>
         </div>
-        <ul>
-            <li>
+        <ul class="t_service_iconList">
+            <li class="t_service_icon">
                 <a href="">サービス1</a>
             </li>
-            <li>
+            <li class="t_service_icon">
                 <a href="">サービス2</a>
             </li>
-            <li>
+            <li class="t_service_icon">
                 <a href="">サービス3</a>
             </li>
-            <li>
+            <li class="t_service_icon">
                 <a href="">サービス4</a>
             </li>
-            <li>
+            <li class="t_service_icon">
                 <a href="">サービス5</a>
             </li>
         </ul>
-        <a href="">サービス一覧見る</a>
+        <a href="" class="t_service_btn">サービス一覧見る</a>
     </section>
-    <section>
-        <div>
-            <p>Case</p>
-            <h2>お客様事例</h2>
+    <section class="t_case">
+        <div class="t_case_titleBox">
+            <p class="t_case_subTitle">Case</p>
+            <h2 class="t_case_title">お客様事例</h2>
         </div>
-        <ul>
-            <li>
-                <a href="">
-                    <p><img src="/assets/images/image.png" alt=""></p>
-                    <p>
-                        <span>サブタイトルサブタイトル</span>
-                        <time datatime="2022-06-20">2022.06.20</time>
+        <ul class="t_case_articleList">
+            <li class="t_case_article">
+                <a href="" class="t_case_articleLink">
+                    <p class="t_case_articleImage"><img src="/assets/images/image.png" alt=""></p>
+                    <p class="t_case_articleSub">
+                        <span class="t_case_articleSubTitle">サブタイトルサブタイトル</span>
+                        <time datatime="2022-06-20" class="t_case_articleDate">2022.06.20</time>
                     </p>
-                    <h3>事例タイトル事例タイトル事例タイトル事例タイトル</h3>
-                    <span>タグ</span>
+                    <h3 class="t_case_articleTitle">事例タイトル事例タイトル事例タイトル事例タイトル</h3>
+                    <span class="t_case_articleTag">タグ</span>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <p><img src="/assets/images/image.png" alt=""></p>
-                    <p>
-                        <span>サブタイトルサブタイトル</span>
-                        <time datatime="2022-06-20">2022.06.20</time>
+            <li class="t_case_article">
+                <a href="" class="t_case_articleLink">
+                    <p class="t_case_articleImage"><img src="/assets/images/image.png" alt=""></p>
+                    <p class="t_case_articleSub">
+                        <span class="t_case_articleSubTitle">サブタイトルサブタイトル</span>
+                        <time datatime="2022-06-20" class="t_case_articleDate">2022.06.20</time>
                     </p>
-                    <h3>事例タイトル事例タイトル事例タイトル事例タイトル</h3>
-                    <span>タグ</span>
+                    <h3 class="t_case_articleTitle">事例タイトル事例タイトル事例タイトル事例タイトル</h3>
+                    <span class="t_case_articleTag">タグ</span>
                 </a>
             </li>
-            <li>
-                <a href="">
-                    <p><img src="/assets/images/image.png" alt=""></p>
-                    <p>
-                        <span>サブタイトルサブタイトル</span>
-                        <time datatime="2022-06-20">2022.06.20</time>
+            <li class="t_case_article">
+                <a href="" class="t_case_articleLink">
+                    <p class="t_case_articleImage"><img src="/assets/images/image.png" alt=""></p>
+                    <p class="t_case_articleSub">
+                        <span class="t_case_articleSubTitle">サブタイトルサブタイトル</span>
+                        <time datatime="2022-06-20" class="t_case_articleDate">2022.06.20</time>
                     </p>
-                    <h3>事例タイトル事例タイトル事例タイトル事例タイトル</h3>
-                    <span>タグ</span>
+                    <h3 class="t_case_articleTitle">事例タイトル事例タイトル事例タイトル事例タイトル</h3>
+                    <span class="t_case_articleTag">タグ</span>
                 </a>
             </li>
         </ul>
-        <a href="">事例一覧見る</a>
+        <a href="" class="t_case_btn">事例一覧見る</a>
     </section>
-    <section>
-        <div>
-            <p>Support</p>
-            <h2>きめ細やかなサポート</h2>
+    <section class="t_support">
+        <div class="t_support_titleBox">
+            <p class="t_support_subTitle">Support</p>
+            <h2 class="t_service_title">きめ細やかなサポート</h2>
         </div>
-        <div>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <p><img src="/assets/images/image2.png" alt=""></p>
-        </div>
-    </section>
-    <section>
-        <div>
-            <p>Sustainable</p>
-            <h2>サスティナビリティ</h2>
-        </div>
-        <div>
-            <h3>サスティナビリティサブタイトル</h3>
-            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-            <a href="">サスティナビリティを見る</a>
+        <div class="t_support_contentBox">
+            <p class="t_support_contentText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <p class="t_support_contentImage"><img src="/assets/images/image2.png" alt=""></p>
         </div>
     </section>
-    <section>
-        <div>
-            <p>News</p>
-            <h2>ニュース</h2>
+    <section class="t_sustainable">
+        <div class="t_sustainable_titleBox">
+            <p class="t_sustainable_subTitle">Sustainable</p>
+            <h2 class="t_sustainable_title">サスティナビリティ</h2>
         </div>
-        <div>
-            <ul>
-                <li>全て</li>
-                <li>カテゴリー1</li>
-                <li>カテゴリー2</li>
-                <li>カテゴリー3</li>
-            </ul>
-            <div>
-                <ul>
-                    <li>
-                        <time datatime="2022-06-20">2022.06.20</time><span>カテゴリー1</span>
-                        <a href="">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
+        <div class="t_sustainable_content">
+            <h3 class="t_sustainable_contentTitle">サスティナビリティサブタイトル</h3>
+            <p class="t_sustainable_contentText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <a href="" class="t_sustainable_btn">サスティナビリティを見る</a>
+        </div>
+    </section>
+    <section class="t_news">
+        <div class="t_news_titleBox">
+            <p class="t_news_subTitle">News</p>
+            <h2 class="t_news_title">ニュース</h2>
+        </div>
+        <div class="t_news_box">
+            <div class="t_news_catListBox">
+                <ul class="t_news_catList">
+                    <li class="t_news_cat active">全て</li>
+                    <li class="t_news_cat">カテゴリー1</li>
+                    <li class="t_news_cat">カテゴリー2</li>
+                    <li class="t_news_cat">カテゴリー3</li>
+                </ul>
+            </div>
+            <div class="t_news_listBox">
+                <ul class="t_news_list">
+                    <li class="t_news_article">
+                        <time datatime="2022-06-20" class="t_news_articleDate">2022.06.20</time><span class="t_news_articleCat">カテゴリー1</span>
+                        <a href="" class="t_news_articleTitle">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
                     </li>
-                    <li>
-                        <time datatime="2022-06-20">2022.06.20</time><span>カテゴリー1</span>
-                        <a href="">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
+                    <li class="t_news_article">
+                        <time datatime="2022-06-20" class="t_news_articleDate">2022.06.20</time><span class="t_news_articleCat">カテゴリー1</span>
+                        <a href="" class="t_news_articleTitle">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
                     </li>
-                    <li>
-                        <time datatime="2022-06-20">2022.06.20</time><span>カテゴリー1</span>
-                        <a href="">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
+                    <li class="t_news_article">
+                        <time datatime="2022-06-20" class="t_news_articleDate">2022.06.20</time><span class="t_news_articleCat">カテゴリー1</span>
+                        <a href="" class="t_news_articleTitle">ニュースタイトルニュースタイトルニュースタイトルニュースタイトル</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <a href="">ニュース一覧を見る</a>
+        <a href="" class="t_news_btn">ニュース一覧を見る</a>
     </section>
 </main>
 <%_ } _%> 
