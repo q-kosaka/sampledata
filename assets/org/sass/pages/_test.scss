@@ -130,37 +130,10 @@ body {
         }
     }
     &service_subTitle {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        font-weight: bold;
-        color: $primary;
-        letter-spacing: 0.5rem;
-        position: relative;
-        display: inline-block;
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            top:calc((100% - 1px) / 2);
-            right: -90px;
-            width: 80px;
-            height: 1px;
-            background:#ccc;
-        }
-        @include media( pc ){
-            font-size: 1.6rem;
-            line-height: 1.6rem;
-        }
+        @include subtitleLeft;
     }
     &service_title {
-        font-size: 2.6rem;
-        font-weight: bold;
-        margin-top: 6vw;
-        @include media( pc ){
-            font-size: 3rem;
-            line-height: 3rem;
-            margin-top: 30px;
-        }
+        @include titleLeft;
     }
     &service_iconList {
         display: flex;
@@ -214,58 +187,45 @@ body {
         }
     }
     &case_subTitle {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        font-weight: bold;
-        color: $primary;
-        letter-spacing: 0.5rem;
-        position: relative;
-        display: inline-block;
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            top:calc((100% - 1px) / 2);
-            left: -90px;
-            width: 80px;
-            height: 1px;
-            background:#ccc;
-        }
-        @include media( pc ){
-            font-size: 1.6rem;
-            line-height: 1.6rem;
-        }
+        @include subtitleRight;
     }
     &case_title {
-        font-size: 2.6rem;
-        font-weight: bold;
-        margin-top: 6vw;
-        @include media( pc ){
-            font-size: 3rem;
-            line-height: 3rem;
-            margin-top: 30px;
-        }
+        @include titleRight;
     }
     &case_articleList {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 10vw;
+        @include media( pc ){
+            margin-bottom: 60px;
+        }
     }
     &case_article {
         width: 100vw;
         display: block;
         margin-bottom:8vw;
+        @include media( pc ){
+            width: 31%;
+            margin-bottom: 40px;
+        }
     }
     &case_articleImage {
         border-radius: 2vw;
         overflow: hidden;
         margin-bottom: 4vw;
+        @include media( pc ){
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
     }
     &case_articleSub {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 2vw;
+        @include media( pc ){
+            margin-bottom: 10px;
+        }
     }
     &case_articleSubTitle {
         color: $primary;
@@ -282,6 +242,9 @@ body {
         color:$dark;
         font-weight: bold;
         margin-bottom: 2vw;
+        @include media( pc ){
+            margin-bottom: 10px;
+        }
     }
     &case_articleTag {
         background: $primary;
@@ -289,6 +252,10 @@ body {
         color: #fff;
         font-size: 1.4rem;
         line-height: 1rem;
+        @include media( pc ){
+            padding: 5px 20px;
+            margin-bottom: 20px;
+        }
     }
     &case_btn {
         @include greenBtn(80vw);
@@ -296,84 +263,77 @@ body {
     /*サポート*/
     &support {
         @include contentWidth;
+        @include media( pc ){
+            width: 1200px;
+            margin: 0 auto;
+            padding: 120px 0 0 0;
+        }
     }
     &support_titleBox {
         margin-bottom: 10vw;
-    }
-    &support_subTitle {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        font-weight: bold;
-        color: $primary;
-        letter-spacing: 0.5rem;
-        position: relative;
-        display: inline-block;
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            top:calc((100% - 1px) / 2);
-            right: -90px;
-            width: 80px;
-            height: 1px;
-            background:#ccc;
+        @include media( pc ){
+            margin-bottom: 60px;
         }
     }
+    &support_subTitle {
+        @include subtitleLeft;
+    }
     &service_title {
-        font-size: 2.6rem;
-        font-weight: bold;
-        margin-top: 6vw;
+        @include titleLeft;
     }
     &support_contentBox {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         flex-direction: column-reverse;
+        @include media( pc ){
+            flex-direction: row;
+        }
     }
     &support_contentText {
         width: 100%;
+        @include media( pc ){
+            width: 60%;
+        }
     }
     &support_contentImage {
         width: 100%;
         margin-bottom: 5vw;
+        @include media( pc ){
+            width: 34%;
+            margin-bottom: 0;
+        }
     }
     /*サステナビリティ*/
     &sustainable {
         @include contentWidth;
+        @include media( pc ){
+            padding-bottom: 80px;
+            padding-top: 80px;
+        }
     }
     &sustainable_titleBox {
         margin-bottom: 10vw;
         text-align: right;
-    }
-    &sustainable_subTitle {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        font-weight: bold;
-        color: $primary;
-        letter-spacing: 0.5rem;
-        position: relative;
-        display: inline-block;
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            top:calc((100% - 1px) / 2);
-            left: -90px;
-            width: 80px;
-            height: 1px;
-            background:#ccc;
+        @include media( pc ){
+            width:1200px;
+            margin: 0 auto 60px;
         }
     }
+    &sustainable_subTitle {
+        @include subtitleRight;
+    }
     &sustainable_title {
-        font-size: 2.6rem;
-        font-weight: bold;
-        margin-top: 6vw;
+        @include titleRight;
     }
     &sustainable_content {
         width:100vw;
         margin-left:-5vw;
         padding: 10vw 5vw;
         background: $primary-s;
+        @include media( pc ){
+            padding: 80px 0;
+        }
     }
     &sustainable_contentTitle {
         font-size:1.8rem;
@@ -381,9 +341,18 @@ body {
         color: $primary;
         text-align: center;
         margin-bottom: 5vw;
+        @include media( pc ){
+            width:1200px;
+            margin: 0 auto 40px;
+            font-size:3rem;
+        }
     }
     &sustainable_contentText {
         margin-bottom: 5vw;
+        @include media( pc ){
+            width:1200px;
+            margin: 0 auto 40px;
+        }
     }
     &sustainable_btn {
         @include greenBtn(80vw);
@@ -392,36 +361,29 @@ body {
     /*ニュース*/
     &news {
         @include contentWidth;
+        @include media( pc ){
+            width: 1200px;
+            margin: 0 auto 60px;
+            padding: 60px 0 0 0;
+        }
     }
     &news_titleBox {
         margin-bottom: 10vw;
-    }
-    &news_subTitle {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        font-weight: bold;
-        color: $primary;
-        letter-spacing: 0.5rem;
-        position: relative;
-        display: inline-block;
-        &::after {
-            position: absolute;
-            display: block;
-            content: '';
-            top:calc((100% - 1px) / 2);
-            right: -90px;
-            width: 80px;
-            height: 1px;
-            background:#ccc;
+        @include media( pc ){
+            margin-bottom: 60px;
         }
     }
+    &news_subTitle {
+        @include subtitleLeft;
+    }
     &news_title {
-        font-size: 2.6rem;
-        font-weight: bold;
-        margin-top: 6vw;
+        @include titleLeft;
     }
     &news_box {
         padding: 0 0 10vw 0;
+        @include media( pc ){
+            padding-bottom: 60px;
+        }
     }
     &news_catListBox {
         overflow-x: scroll;
@@ -439,10 +401,16 @@ body {
             color: $primary;
             border-bottom:solid 2px $primary;
         }
+        @include media( pc ){
+            padding: 20px 40px;
+        }
     }
     &news_article {
         padding: 5vw 0;
         border-bottom:solid 1px $glay-l;
+        @include media( pc ){
+            padding: 20px 0;
+        }
     }
     &news_articleDate {
         display: inline-block;
@@ -451,6 +419,11 @@ body {
         font-size: 1.4rem;
         line-height: 1;
         padding:1vw 0;
+        @include media( pc ){
+            margin-right: 20px;
+            padding: 10px 0;
+            font-size: 1.6rem;
+        }
     }
     &news_articleCat {
         display: inline-block;
@@ -459,10 +432,16 @@ body {
         font-size: 1.4rem;
         line-height: 1;
         padding:1vw 2vw;
+        @include media( pc ){
+            padding: 5px 10px;
+        }
     }
     &news_articleTitle {
         display: block;
         margin-top: 3vw;
+        @include media( pc ){
+            margin-top: 10px;
+        }
     }
     &news_btn {
         @include greenBtn(80vw);

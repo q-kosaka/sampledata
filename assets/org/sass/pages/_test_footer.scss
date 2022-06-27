@@ -6,6 +6,9 @@ footer{
     &contact {
         width: 100%;
         padding: 10vw 0;
+        @include media( pc ){
+            padding: 80px 0;
+        }
     }
     &contact_btn {
         text-align: center;
@@ -18,6 +21,11 @@ footer{
         color: $primary;
         border-radius: 1.5vw;
         position: relative;
+        @include media( pc ){
+            width: 50%;
+            height: 200px;
+            line-height: 200px;
+        }
     }
     &totop {
         height: getSize(140)+'vw';
@@ -26,6 +34,15 @@ footer{
         & img {
             width: auto;
             height: getSize(140)+'vw';
+        }
+        @include media( pc ){
+            background-color: none;
+            width: 70px;
+            height: 70px;
+            & img {
+                width: auto;
+                height: 70px;
+            }
         }
     }
     &contents {
@@ -36,7 +53,7 @@ footer{
         background: $glay-d;
         padding: 0 5vw;
         @include media( pc ){
-            flex-direction: column;
+            flex-direction: row;
             width: 1200px;
             margin: 0 auto;
             padding: 0;
@@ -51,6 +68,9 @@ footer{
     }
     &contents_logo {
         margin-bottom: 5vw;
+        @include media( pc ){
+            margin-bottom: 40px;
+        }
         & img {
             width: auto;
             height: getSize(80)+'vw';
@@ -61,12 +81,21 @@ footer{
     }
     &contents_address {
         margin-bottom: 1vw;
+        @include media( pc ){
+            margin-bottom: 10px;
+        }
     }
     &contents_tel {
         margin-bottom: 1vw;
+        @include media( pc ){
+            margin-bottom: 10px;
+        }
     }
     &contents_fax {
         margin-bottom: 8vw;
+        @include media( pc ){
+            margin-bottom: 20px;
+        }
     }
     &contents_iconList {
         display: flex;
@@ -79,6 +108,12 @@ footer{
         }
         & img {
             width: getSize(95)+'vw';
+        }
+        @include media( pc ){
+            margin-right: 20px;
+            & img {
+                width: 40px;
+            }
         }
     }
     &contents_navi {
@@ -98,6 +133,7 @@ footer{
         @include media( pc ){
             margin-left: 0;
             width: 100%;
+            display: flex;
         }
     }
     &menu_list {
@@ -121,7 +157,7 @@ footer{
         @include media( pc ){
             padding: 0;
             width: 1200px;
-            margin: 0 auto 80px auto;
+            margin: 40px auto 40px auto;
         }
     }
     &subnavi_menuList {
