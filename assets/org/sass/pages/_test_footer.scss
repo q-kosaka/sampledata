@@ -1,0 +1,166 @@
+/*フッター*/
+footer{
+    background: $glay-d;
+}
+.f_ {
+    &contact {
+        width: 100%;
+        padding: 10vw 0;
+    }
+    &contact_btn {
+        text-align: center;
+        width: 80vw;
+        margin: 0 auto;
+        background: #fff;
+        display: block;
+        height: getSize(160)+'vw';
+        line-height: getSize(160)+'vw';
+        color: $primary;
+        border-radius: 1.5vw;
+        position: relative;
+    }
+    &totop {
+        height: getSize(140)+'vw';
+        text-align: center;
+        background-color: #e0e0e0;
+        & img {
+            width: auto;
+            height: getSize(140)+'vw';
+        }
+    }
+    &contents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        background: $glay-d;
+        padding: 0 5vw;
+        @include media( pc ){
+            flex-direction: column;
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+    &contents_box{
+        color: #fff;
+        @include media( pc ){
+            width: 40%;
+            margin: 0;
+        }
+    }
+    &contents_logo {
+        margin-bottom: 5vw;
+        & img {
+            width: auto;
+            height: getSize(80)+'vw';
+            @include media( pc ){
+                height: 40px;
+            }
+        }
+    }
+    &contents_address {
+        margin-bottom: 1vw;
+    }
+    &contents_tel {
+        margin-bottom: 1vw;
+    }
+    &contents_fax {
+        margin-bottom: 8vw;
+    }
+    &contents_iconList {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &contents_icon {
+        margin-right: 8vw;
+        &:last-child {
+            margin-right: 0;
+        }
+        & img {
+            width: getSize(95)+'vw';
+        }
+    }
+    &contents_navi {
+        margin: 0 0 5vw 0;
+        & a {
+            color: #fff;
+            display: block;
+        }
+        @include media( pc ){
+            margin-left: 0;
+            width: 60%;
+        }
+    }
+    &menu {
+        margin-left: -5vw;
+        width: 100vw;
+        @include media( pc ){
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+    &menu_list {
+        padding: 0 5vw;
+        border-bottom:solid 1px $glay-ll;
+        line-height: getSize(100)+'vw';
+        @include media( pc ){
+            padding: 0 10px;
+            border-bottom:none;
+            line-height: 1.4rem;
+        }
+    }
+    &submenu {
+        display: none;
+        @include media( pc ){
+            display: block;
+        }
+    }
+    &subnavi {
+        padding: 10vw 5vw;
+        @include media( pc ){
+            padding: 0;
+            width: 1200px;
+            margin: 0 auto 80px auto;
+        }
+    }
+    &subnavi_menuList {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        & a {
+            color: #fff;
+            border-right:solid 1px $glay-ll;
+            padding-right: 5vw;
+            @include media( pc ){
+                padding-right: 15px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &subnavi_menu {
+        padding: 0 5vw 0 0;
+        @include media( pc ){
+            padding: 0 15px 0 0;
+        }
+        &:last-child {
+            padding-right: 0;
+            & a {
+                padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+    &copy {
+        text-align: center;
+        height: getSize(80)+'vw';
+        line-height: getSize(80)+'vw';
+        font-size: 1.4rem;
+        background: #fff;
+        @include media( pc ){
+            height: 82px;
+            line-height: 82px;
+            font-size: 1.2rem;
+        }
+    }
+}

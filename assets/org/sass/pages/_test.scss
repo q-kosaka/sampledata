@@ -11,98 +11,7 @@ body {
         display: none;
     }
 }
-/*ヘッダー*/
-.h_ {
-    &header {
-        background:#fff;
-        height: getSize(120)+'vw';
-        width: 100%;
-        font-size: 1.6rem;
-        padding: 0 getSize(40)+'vw';
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        position:sticky;
-        top:0;
-        z-index: 10;
-        box-shadow: 0px 3px 3px 0 rgba(100,100,100,0.1);
-        @include media( pc ){
-            height: 60px;
-            padding: 0 20px;
-        }
-    }
-    &logo {
-        width: auto;
-        margin-top: getSize(20)+'vw';
-        @include media( pc ){
-            margin-top: 10px;
-        }
-    }
-    &logoImg {
-        width: auto;
-        height: getSize(80)+'vw';
-        @include media( pc ){
-            height: 40px;
-        }
-    }
-    &menuBack{
-        display: none;
-    }
-    &menuBox {
-        display: none;
-    }
-    &spNavi {
-        display: block;
-        position: relative;
-        height: getSize(120)+'vw';
-        width: getSize(120)+'vw';
-        background: $primary;
-        right: getSize(-40)+'vw';
-        @include media( pc ){
-            display: none;
-        }
-    }
-    &spBtn {
-        height: getSize(120)+'vw';
-        width: getSize(120)+'vw';
-        position: absolute;
-        right: 0;
-        z-index: 20;
-        background: none;
-        & span {
-            display: block;
-            width: getSize(60)+'vw';
-            height: getSize(8)+'vw';
-            background: #fff;
-            position: absolute;
-            right: getSize(30)+'vw';
-            transition: .5s ease;
-            border-radius: 100vw;
-        }
-    }
-    &bar1 {
-        top: getSize(34)+'vw';
-    }
-    .open &bar1 {
-        top: getSize(58)+'vw';
-        transform: rotate(-45deg);
-        background: #fff;
-    }
-    &bar2 {
-        top: getSize(56)+'vw';
-    }
-    .open &bar2 {
-        opacity: 0;
-    }
-    &bar3 {
-        bottom: getSize(34)+'vw';
-    }
-    .open &bar3 {
-        top: getSize(58)+'vw';
-        transform: rotate(45deg);
-        background: #fff;
-    }
-}
+
 /*トップページ*/
 .t_ {
     /*キービジュアル*/
@@ -208,9 +117,17 @@ body {
     /*サービス*/
     &service {
         @include contentWidth;
+        @include media( pc ){
+            width: 1200px;
+            margin: 0 auto;
+            padding: 120px 0 0 0;
+        }
     }
     &service_titleBox {
         margin-bottom: 10vw;
+        @include media( pc ){
+            margin-bottom: 60px;
+        }
     }
     &service_subTitle {
         font-size: 1.4rem;
@@ -230,11 +147,20 @@ body {
             height: 1px;
             background:#ccc;
         }
+        @include media( pc ){
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+        }
     }
     &service_title {
         font-size: 2.6rem;
         font-weight: bold;
         margin-top: 6vw;
+        @include media( pc ){
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-top: 30px;
+        }
     }
     &service_iconList {
         display: flex;
@@ -243,6 +169,9 @@ body {
         margin-bottom: 10vw;
         & li:last-child, & li:nth-last-child(2) {
             margin-bottom:0;
+        }
+        @include media( pc ){
+            margin-bottom: 120px;
         }
     }
     &service_icon {
@@ -256,6 +185,14 @@ body {
         background: url(../images/icon.png) center 20% no-repeat;
         background-size: 70%;
         padding-top:34.56vw;
+        @include media( pc ){
+            width: 18.4%;
+            height: 18.4%;
+            padding-top:200px;
+            padding-bottom:20px;
+            font-size: 1.6rem;
+            margin-bottom:0;
+        }
     }
     &service_btn {
         @include greenBtn(80vw);
@@ -263,10 +200,18 @@ body {
     /*事例*/
     &case {
         @include contentWidth;
+        @include media( pc ){
+            width: 1200px;
+            margin: 0 auto;
+            padding: 120px 0 0 0;
+        }
     }
     &case_titleBox {
         margin-bottom: 10vw;
         text-align: right;
+        @include media( pc ){
+            margin-bottom: 60px;
+        }
     }
     &case_subTitle {
         font-size: 1.4rem;
@@ -286,11 +231,20 @@ body {
             height: 1px;
             background:#ccc;
         }
+        @include media( pc ){
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+        }
     }
     &case_title {
         font-size: 2.6rem;
         font-weight: bold;
         margin-top: 6vw;
+        @include media( pc ){
+            font-size: 3rem;
+            line-height: 3rem;
+            margin-top: 30px;
+        }
     }
     &case_articleList {
         display: flex;
@@ -512,171 +466,5 @@ body {
     }
     &news_btn {
         @include greenBtn(80vw);
-    }
-}
-/*フッター*/
-footer{
-    background: $glay-d;
-}
-.f_ {
-    &contact {
-        width: 100%;
-        padding: 10vw 0;
-    }
-    &contact_btn {
-        text-align: center;
-        width: 80vw;
-        margin: 0 auto;
-        background: #fff;
-        display: block;
-        height: getSize(160)+'vw';
-        line-height: getSize(160)+'vw';
-        color: $primary;
-        border-radius: 1.5vw;
-        position: relative;
-    }
-    &totop {
-        height: getSize(140)+'vw';
-        text-align: center;
-        background-color: #e0e0e0;
-        & img {
-            width: auto;
-            height: getSize(140)+'vw';
-        }
-    }
-    &contents {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-direction: column-reverse;
-        background: $glay-d;
-        padding: 0 5vw;
-        @include media( pc ){
-            flex-direction: column;
-            width: 1200px;
-            margin: 0 auto;
-            padding: 0;
-        }
-    }
-    &contents_box{
-        color: #fff;
-        @include media( pc ){
-            width: 40%;
-            margin: 0;
-        }
-    }
-    &contents_logo {
-        margin-bottom: 5vw;
-        & img {
-            width: auto;
-            height: getSize(80)+'vw';
-            @include media( pc ){
-                height: 40px;
-            }
-        }
-    }
-    &contents_address {
-        margin-bottom: 1vw;
-    }
-    &contents_tel {
-        margin-bottom: 1vw;
-    }
-    &contents_fax {
-        margin-bottom: 8vw;
-    }
-    &contents_iconList {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    &contents_icon {
-        margin-right: 8vw;
-        &:last-child {
-            margin-right: 0;
-        }
-        & img {
-            width: getSize(95)+'vw';
-        }
-    }
-    &contents_navi {
-        margin: 0 0 5vw 0;
-        & a {
-            color: #fff;
-            display: block;
-        }
-        @include media( pc ){
-            margin-left: 0;
-            width: 60%;
-        }
-    }
-    &menu {
-        margin-left: -5vw;
-        width: 100vw;
-        @include media( pc ){
-            margin-left: 0;
-            width: 100%;
-        }
-    }
-    &menu_list {
-        padding: 0 5vw;
-        border-bottom:solid 1px $glay-ll;
-        line-height: getSize(100)+'vw';
-        @include media( pc ){
-            padding: 0 10px;
-            border-bottom:none;
-            line-height: 1.4rem;
-        }
-    }
-    &submenu {
-        display: none;
-        @include media( pc ){
-            display: block;
-        }
-    }
-    &subnavi {
-        padding: 10vw 5vw;
-        @include media( pc ){
-            padding: 0;
-            width: 1200px;
-            margin: 0 auto 80px auto;
-        }
-    }
-    &subnavi_menuList {
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1.4rem;
-        & a {
-            color: #fff;
-            border-right:solid 1px $glay-ll;
-            padding-right: 5vw;
-            @include media( pc ){
-                padding-right: 15px;
-                font-size: 1.2rem;
-            }
-        }
-    }
-    &subnavi_menu {
-        padding: 0 5vw 0 0;
-        @include media( pc ){
-            padding: 0 15px 0 0;
-        }
-        &:last-child {
-            padding-right: 0;
-            & a {
-                padding-right: 0;
-                border-right: none;
-            }
-        }
-    }
-    &copy {
-        text-align: center;
-        height: getSize(80)+'vw';
-        line-height: getSize(80)+'vw';
-        font-size: 1.4rem;
-        background: #fff;
-        @include media( pc ){
-            height: 82px;
-            line-height: 82px;
-            font-size: 1.2rem;
-        }
     }
 }

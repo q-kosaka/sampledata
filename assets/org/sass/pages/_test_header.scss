@@ -1,0 +1,181 @@
+/*ヘッダー*/
+.h_ {
+    &header {
+        background:#fff;
+        height: getSize(120)+'vw';
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 0 getSize(40)+'vw';
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position:sticky;
+        top:0;
+        z-index: 10;
+        box-shadow: 0px 3px 3px 0 rgba(100,100,100,0.1);
+        @include media( pc ){
+            height: 60px;
+            padding: 0 20px;
+        }
+    }
+    &logo {
+        width: auto;
+        margin-top: getSize(20)+'vw';
+        @include media( pc ){
+            margin-top: 10px;
+        }
+    }
+    &logoImg {
+        width: auto;
+        height: getSize(80)+'vw';
+        @include media( pc ){
+            height: 40px;
+        }
+    }
+    &menuBack{
+        display: none;
+    }
+    &menuBox {
+        display: none;
+        @include media( pc ){
+            display: flex;
+            justify-content: end;
+            height: 60px;
+        }
+    }
+    &menu {
+
+        @include media( pc ){
+            display: flex;
+            line-height: 1;
+            position: relative;
+        }
+    }
+
+    &menu_item {
+
+        @include media( pc ){
+            display: flex;
+            line-height: 60px;
+            margin-right: 20px;
+        }
+    }
+    &submenu {
+
+        @include media( pc ){
+            display: none;
+            line-height: 1;
+            position: absolute;
+        }
+    }
+
+    &subArea {
+
+        @include media( pc ){
+            display: flex;
+            line-height: 60px;
+        }
+    }
+    &subBtn {
+
+        @include media( pc ){
+            display: flex;
+        }
+    }
+    &search {
+
+        @include media( pc ){
+            position: relative;
+            margin-right: 20px;
+        }
+    }
+
+    &search_text {
+        @include media( pc ){
+            width:200px;
+            height: 40px;
+            padding-right:60px;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    &search_btn {
+
+        @include media( pc ){
+            position: absolute;
+            width:50px;
+            height: 20px;
+            top: 20px;
+            right: 6px;
+        }
+    }
+
+    &shop {
+
+        @include media( pc ){
+            @include yellowBtnS;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+    }
+
+    &contact {
+
+        @include media( pc ){
+            @include greenBtnS;
+            margin-top: 10px;
+        }
+    }
+    &spNavi {
+        display: block;
+        position: relative;
+        height: getSize(120)+'vw';
+        width: getSize(120)+'vw';
+        background: $primary;
+        right: getSize(-40)+'vw';
+        @include media( pc ){
+            display: none;
+        }
+    }
+    &spBtn {
+        height: getSize(120)+'vw';
+        width: getSize(120)+'vw';
+        position: absolute;
+        right: 0;
+        z-index: 20;
+        background: none;
+        & span {
+            display: block;
+            width: getSize(60)+'vw';
+            height: getSize(8)+'vw';
+            background: #fff;
+            position: absolute;
+            right: getSize(30)+'vw';
+            transition: .5s ease;
+            border-radius: 100vw;
+        }
+    }
+    &bar1 {
+        top: getSize(34)+'vw';
+    }
+    .open &bar1 {
+        top: getSize(58)+'vw';
+        transform: rotate(-45deg);
+        background: #fff;
+    }
+    &bar2 {
+        top: getSize(56)+'vw';
+    }
+    .open &bar2 {
+        opacity: 0;
+    }
+    &bar3 {
+        bottom: getSize(34)+'vw';
+    }
+    .open &bar3 {
+        top: getSize(58)+'vw';
+        transform: rotate(45deg);
+        background: #fff;
+    }
+}
