@@ -144,12 +144,20 @@ footer{
             padding: 0 10px;
             border-bottom:none;
             line-height: 1.4rem;
+            font-weight: bold;
         }
     }
     &submenu {
         display: none;
         @include media( pc ){
             display: block;
+        }
+    }
+    &menu_sublist {
+        & a {
+            font-size: 1.4rem;
+            margin-top: 16px;
+            font-weight: normal;
         }
     }
     &subnavi {

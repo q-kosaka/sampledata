@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@import "reset";
+
+/*
+ + mixin , variableのimportはここで呼び出す
+ +
+ + ※mixinで使われる可能性があるので、variableが先になるように
+ */
+
+@import "variables/common";
+@import "variables/fontfamily";
+@import "variables/skin";
+@import "variables/responsive";
+
+@import "mixins/common";
+
+/*
+ +	core css
+ */
+@import "core_pc";
+
+/*
+ +	partsのimportはここで呼び出す
+ */
+//@import "pages/**/*";
+@import "pages/test31";
+
+/*
+ +	pageのimportはここで呼び出す
+ */
+
+
+
+/*
+ +	print対策用
+ */
+@media print{
+	html{
+		zoom: 0.8;
+	}
+}
