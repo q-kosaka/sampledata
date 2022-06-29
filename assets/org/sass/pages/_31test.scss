@@ -1,0 +1,553 @@
+img{
+    width: 100%;
+    height: auto;
+}
+.lp- {
+    &main {
+        width: 100vw;
+        font-size: 10px;
+        @include media( pc ){
+            width: 100vw;
+            font-size: 10px;
+        }
+    }
+    &mvBox {
+        width: 100vw;
+        height: getSize(1366)+'vw';
+        background: #00B3EC;
+        position: relative;
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(1366)+'px';
+            margin: 0 auto;
+        }
+    }
+    &mv31Logo {
+        z-index: 3;
+        position: absolute;
+        top: getSize(26)+'vw';
+        left: getSize(30)+'vw';
+        width: getSize(190)+'vw';
+        height: getSize(62.4196)+'vw';
+        @include media( pc ){
+            top: getPcSize(26)+'px';
+            left: getPcSize(30)+'px';
+            width: getPcSize(190)+'px';
+            height: getPcSize(62.4196)+'px';
+        }
+    }
+    &mvPmLogo {
+        z-index: 3;
+        position: absolute;
+        top: getSize(12)+'vw';
+        right: getSize(17)+'vw';
+        width: getSize(344)+'vw';
+        height: getSize(108)+'vw';
+        @include media( pc ){
+            top: getPcSize(12)+'px';
+            right: getPcSize(17)+'px';
+            width: getPcSize(344)+'px';
+            height: getPcSize(108)+'px';
+        }
+    }
+    &mvKv {
+        z-index: 2;
+        position: absolute;
+        top: getSize(80)+'vw';
+        left: getSize(30)+'vw';
+        width: getSize(673)+'vw';
+        height: getSize(677)+'vw';
+        @include media( pc ){
+            top: getPcSize(80)+'px';
+            left: getPcSize(30)+'px';
+            width: getPcSize(673)+'px';
+            height: getPcSize(677)+'px';
+        }
+    }
+    &mvDay {
+        z-index: 1;
+        position: absolute;
+        top: getSize(218)+'vw';
+        left: getSize(5)+'vw';
+        width: getSize(173)+'vw';
+        height: getSize(172)+'vw';
+        @include media( pc ){
+            top: getPcSize(218)+'px';
+            left: getPcSize(5)+'px';
+            width: getPcSize(173)+'px';
+            height: getPcSize(172)+'px';
+        }
+    }
+    &mvTxt {
+        z-index: 1;
+        position: absolute;
+        top: getSize(163)+'vw';
+        right: getSize(0)+'vw';
+        width: getSize(151)+'vw';
+        height: getSize(285)+'vw';
+        @include media( pc ){
+            top: getPcSize(163)+'px';
+            right: getPcSize(0)+'px';
+            width: getPcSize(151)+'px';
+            height: getPcSize(285)+'px';
+        }
+    }
+    &mvBtnList {
+        position: absolute;
+        top: getSize(799)+'vw';
+        left: getSize(29)+'vw';
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        width: calc(100% - getSize(58vw));
+        @include media( pc ){
+            top: getPcSize(799)+'px';
+            left: getPcSize(29)+'px';
+            width: calc(100% - getPcSize(58px));
+        }
+    }
+    &mvBtnItem {
+        position: relative;
+        width: getSize(331)+'vw';
+        height: getSize(120)+'vw';
+        border-radius: 2vw;
+        margin-bottom: getSize(20)+'vw';
+        box-shadow: getSize(3vw) getSize(3vw) getSize(6vw) rgba(0,57,119,0.6);
+        @include media( pc ){
+            width: getPcSize(331)+'px';
+            height: getPcSize(120)+'px';
+            border-radius: 10px;
+            margin-bottom: getPcSize(20)+'px';
+            box-shadow: getPcSize(3px) getPcSize(3px) getPcSize(6px) rgba(0,57,119,0.6);
+        }
+        &:last-child {
+            width: 100%;
+            height: getSize(88)+'vw';
+            @include media( pc ){
+                height: getPcSize(88)+'px';
+            }
+            
+        }
+    }
+    &mvBtnImg01 {
+        position: absolute;
+        width: getSize(331)+'vw';
+        height: getSize(142)+'vw';
+        top: getSize(-22)+'vw';
+        left: getSize(0)+'vw';
+        @include media( pc ){
+            width: getPcSize(331)+'px';
+            height: getPcSize(142)+'px';
+            top: getPcSize(-22)+'px';
+            left: getPcSize(0)+'px';
+        }
+    }
+    &mvBtnImg02 {
+        position: absolute;
+        width: getSize(341)+'vw';
+        height: getSize(133)+'vw';
+        top: getSize(-13)+'vw';
+        left: getSize(-10)+'vw';
+        @include media( pc ){
+            width: getPcSize(341)+'px';
+            height: getPcSize(133)+'px';
+            top: getPcSize(-13)+'px';
+            left: getPcSize(-10)+'px';
+        }
+    }
+    &mvBtnImg03 {
+        position: absolute;
+        width: getSize(351)+'vw';
+        height: getSize(124)+'vw';
+        top: getSize(-4)+'vw';
+        left: getSize(-20)+'vw';
+        @include media( pc ){
+            width: getPcSize(351)+'px';
+            height: getPcSize(124)+'px';
+            top: getPcSize(-4)+'px';
+            left: getPcSize(-20)+'px';
+        }
+    }
+    &mvBtnImg04 {
+        position: absolute;
+        width: getSize(348)+'vw';
+        height: getSize(127)+'vw';
+        top: getSize(-7)+'vw';
+        left: getSize(-17)+'vw';
+        @include media( pc ){
+            width: getPcSize(348)+'px';
+            height: getPcSize(127)+'px';
+            top: getPcSize(-7)+'px';
+            left: getPcSize(-17)+'px';
+        }
+    }
+    &mvBtnImg05 {
+        position: absolute;
+        width: getSize(331)+'vw';
+        height: getSize(132)+'vw';
+        top: getSize(-12)+'vw';
+        left: getSize(0)+'vw';
+        @include media( pc ){
+            width: getPcSize(331)+'px';
+            height: getPcSize(132)+'px';
+            top: getPcSize(-12)+'px';
+            left: getPcSize(0)+'px';
+        }
+    }
+    &mvBtnImg06 {
+        position: absolute;
+        width: getSize(339)+'vw';
+        height: getSize(120)+'vw';
+        top: getSize(0)+'vw';
+        left: getSize(-8)+'vw';
+        @include media( pc ){
+            width: getPcSize(339)+'px';
+            height: getPcSize(120)+'px';
+            top: getPcSize(0)+'px';
+            left: getPcSize(-8)+'px';
+        }
+    }
+    &mvBtnImg07 {
+        position: absolute;
+        width: 100%;
+        height: getSize(109)+'vw';
+        top: getSize(-9)+'vw';
+        left: getSize(0)+'vw';
+        @include media( pc ){
+            height: getPcSize(109)+'px';
+            top: getPcSize(-9)+'px';
+            left: getPcSize(0)+'px';
+        }
+    }
+
+    &cont1Box {
+        width: 100vw;
+        position: relative;
+        height: getSize(1244)+'vw';
+        background: #FFF000;
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(1244)+'px';
+            margin: 0 auto;
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: getSize(200)+'vw';
+            background: linear-gradient(to bottom, #FFF000, #FDD000);
+            z-index: 1;
+            @include media( pc ){
+                height: getPcSize(200)+'px';
+            }
+            
+        }
+        & section {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+        }
+    }
+    &cont1BoxInner1 {
+        width: 100%;
+    }
+    &cont1BoxInner2 {
+        position: relative;
+        top: getSize(540)+'vw';
+        @include media( pc ){
+            top: getPcSize(540)+'px';
+        }
+    }
+    &cont1BoxIce01 {
+        position: absolute;
+        width: getSize(401)+'vw';
+        height: getSize(644)+'vw';
+        top: getSize(-26)+'vw';
+        left: getSize(0)+'vw';
+        @include media( pc ){
+            width: getPcSize(401)+'px';
+            height: getPcSize(644)+'px';
+            top: getPcSize(-26)+'px';
+            left: getPcSize(0)+'px';
+        }
+    }
+    &cont1Boxbtn01 {
+        position: absolute;
+        width: getSize(164)+'vw';
+        height: getSize(165)+'vw';
+        top: getSize(368)+'vw';
+        left: getSize(187)+'vw';
+        @include media( pc ){
+            width: getPcSize(164)+'px';
+            height: getPcSize(165)+'px';
+            top: getPcSize(368)+'px';
+            left: getPcSize(187)+'px';
+        }
+    }
+    &cont1BoxTitle01 {
+        position: absolute;
+        width: getSize(373)+'vw';
+        height: getSize(202)+'vw';
+        top: getSize(84)+'vw';
+        left: getSize(377)+'vw';
+        @include media( pc ){
+            width: getPcSize(373)+'px';
+            height: getPcSize(202)+'px';
+            top: getPcSize(84)+'px';
+            left: getPcSize(377)+'px';
+        }
+    }
+    &cont1BoxTxt01 {
+        position: absolute;
+        width: getSize(300)+'vw';
+        top: getSize(288)+'vw';
+        left: getSize(405)+'vw';
+        font-size: getSize(26)+'vw';
+        line-height: getSize(46)+'vw';
+        @include media( pc ){
+            width: getPcSize(300)+'px';
+            top: getPcSize(288)+'px';
+            left: getPcSize(405)+'px';
+            font-size: getPcSize(26)+'px';
+            line-height: getPcSize(46)+'px';
+        }
+    }
+    &cont1BoxIce02 {
+        position: absolute;
+        width: getSize(378)+'vw';
+        height: getSize(567)+'vw';
+        top: getSize(14)+'vw';
+        right: getSize(0)+'vw';
+        @include media( pc ){
+            width: getPcSize(378)+'px';
+            height: getPcSize(567)+'px';
+            top: getPcSize(14)+'px';
+            right: getPcSize(0)+'px';
+        }
+    }
+    &cont1Boxbtn02 {
+        position: absolute;
+        width: getSize(164)+'vw';
+        height: getSize(165)+'vw';
+        top: getSize(437)+'vw';
+        left: getSize(420)+'vw';
+        @include media( pc ){
+            width: getPcSize(164)+'px';
+            height: getPcSize(165)+'px';
+            top: getPcSize(437)+'px';
+            left: getPcSize(420)+'px';
+        }
+    }
+    &cont1BoxTitle02 {
+        position: absolute;
+        width: getSize(361)+'vw';
+        height: getSize(231)+'vw';
+        top: getSize(0)+'vw';
+        left: getSize(45)+'vw';
+        @include media( pc ){
+            width: getPcSize(361)+'px';
+            height: getPcSize(231)+'px';
+            top: getPcSize(0)+'px';
+            left: getPcSize(45)+'px';
+        }
+    }
+    &cont1BoxTxt02 {
+        position: absolute;
+        width: getSize(300)+'vw';
+        top: getSize(237)+'vw';
+        left: getSize(45)+'vw';
+        font-size: getSize(26)+'vw';
+        line-height: getSize(46)+'vw';
+        @include media( pc ){
+            width: getPcSize(300)+'px';
+            top: getPcSize(237)+'px';
+            left: getPcSize(45)+'px';
+            font-size: getPcSize(26)+'px';
+            line-height: getPcSize(46)+'px';
+        }
+        & span {
+            display: block;
+            position: relative;
+            font-size: getSize(22)+'vw';
+            line-height: getSize(34)+'vw';
+            padding-left: getSize(22)+'vw';
+            @include media( pc ){
+                font-size: getPcSize(22)+'px';
+                line-height: getPcSize(34)+'px';
+                padding-left: getPcSize(22)+'px';
+            }
+            &::after {
+                position: absolute;
+                display: block;
+                content: "※";
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &cont2Box {
+        z-index: 10;
+        position: relative;
+        width: 100vw;
+        height: getSize(3513)+'vw';
+        background: #AFCE00;
+        position: relative;
+        margin-top: getSize(-27vw);
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(3513)+'px';
+            margin: getPcSize(-27px) auto 0 auto;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: getSize(-103vw);
+            left: 0;
+            border-bottom: getSize(103vw) solid #AFCE00;
+            border-left: 100vw solid transparent;
+            @include media( pc ){
+                top: getPcSize(-103px);
+                border-bottom: getPcSize(103px) solid #AFCE00;
+                border-left: getPcSize(750px) solid transparent;
+            }
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: getSize(240)+'vw';
+            background: linear-gradient(to bottom, #AFCE00, #22AC38);
+            @include media( pc ){
+                height: getPcSize(240)+'px';
+            }
+            
+        }
+    }
+
+    &cont3Box {
+        z-index: 20;
+        position: relative;
+        height: getSize(1926)+'vw';
+        background: #FFF000;
+        margin-top: getSize(-19vw);
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(1926)+'px';
+            margin: getPcSize(-19px) auto 0 auto;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: getSize(-100vw);
+            left: 0;
+            border-bottom: getSize(100vw) solid #FFF000;
+            border-right: 100vw solid transparent;
+            @include media( pc ){
+                top: getPcSize(-100px);
+                border-bottom: getPcSize(100px) solid #FFF000;
+                border-right: getPcSize(750px) solid transparent;
+            }
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: getSize(200)+'vw';
+            background: linear-gradient(to bottom, #FFF000, #FDD000);
+            z-index: 1;
+            @include media( pc ){
+                height: getPcSize(200)+'px';
+            }
+            
+        }
+    }
+
+    &cont4Box {
+        z-index: 30;
+        position: relative;
+        width: 100vw;
+        height: getSize(891)+'vw';
+        background: #AFCE00;
+        position: relative;
+        margin-top: getSize(-20vw);
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(891)+'px';
+            margin: getPcSize(-20px) auto 0 auto;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: getSize(-100vw);
+            left: 0;
+            border-bottom: getSize(100vw) solid #AFCE00;
+            border-left: 100vw solid transparent;
+            @include media( pc ){
+                top: getPcSize(-100px);
+                border-bottom: getPcSize(100px) solid #AFCE00;
+                border-left: getPcSize(750px) solid transparent;
+            }
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: getSize(240)+'vw';
+            background: linear-gradient(to bottom, #AFCE00, #22AC38);
+            @include media( pc ){
+                height: getPcSize(240)+'px';
+            }
+            
+        }
+    }
+
+    &cont5Box {
+        z-index: 40;
+        position: relative;
+        height: getSize(1332)+'vw';
+        background: #F09DC1;
+        margin-top: getSize(-19vw);
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(1332)+'px';
+            margin: getPcSize(-19px) auto 0 auto;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: getSize(-100vw);
+            left: 0;
+            border-bottom: getSize(100vw) solid #F09DC1;
+            border-right: 100vw solid transparent;
+            @include media( pc ){
+                top: getPcSize(-100px);
+                border-bottom: getPcSize(100px) solid #F09DC1;
+                border-right: getPcSize(750px) solid transparent;
+            }
+        }
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: getSize(281)+'vw';
+            background: linear-gradient(to bottom, #F09DC1, #EB7AAB);
+            z-index: 1;
+            @include media( pc ){
+                height: getPcSize(281)+'px';
+            }
+            
+        }
+    }
+
+}

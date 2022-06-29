@@ -24,6 +24,9 @@
 @function getSize( $size , $width: 750 ) {
   @return #{ $size / $width * 100 };
 }
+@function getPcSize( $pcsize , $pcwidth: 750 ) {
+  @return #{ (540 / $pcwidth) * $pcsize };
+}
 @mixin none-appearance {
   appearance: none;
   -moz-appearance: none;
@@ -149,7 +152,6 @@
       margin-top: 30px;
   }
 }
-
 @mixin greenBtn($btWidht: 80vw) {
   text-align: center;
         width: $btWidht;
@@ -182,7 +184,6 @@
             }
         }
 }
-
 @mixin greenBtnS($btWidht: 80vw) {
   text-align: center;
         width: $btWidht;
@@ -214,8 +215,6 @@
             }
         }
 }
-
-
 @mixin yellowBtnS($btWidht: 80vw) {
   text-align: center;
         width: $btWidht;
