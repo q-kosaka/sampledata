@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes">
+  <title>サイトタイトル</title>
+  <link rel="canonical" href="https://testdata.localdev.com">
+  <meta name="description" content="サイトデスクリプション">
+  <meta name="keywords" content="サイトキーワード">
+  <link rel="stylesheet" href="./assets/css/style31.css?1656642949875">
+</head>
+<body id="top">
+  <main style="width: 900px; margin:40px auto; padding: 40px; font-size: 16px; text-align:center; background: #d0ffef;">
+    <h1 style="font-size: 24px; font-weight:bold;">全てイラストレータの<br>「アセットの書き出し」よりsvgに書き出し</h1>
+    <p style="padding-top:15px;">点線がsvgを書き出した際のキャンバスサイズ。</p>
+    <div>
+      <strong style="font-weight:bold; padding:40px 0 20px 0; display: block;">テキストの影がグラデーション処理</strong>
+      <p style="padding-bottom:20px;">テキストの影がグラデーション処理のため、<br>実体のサイズを持たないので影部分が切れる。<br> safariでボケる（特にRetinaブラウザだとよくわかる。） </p>
+      <p style="border: dashed 3px #2200ff;">
+        <img src="../assets/images/test1.svg">
+      </p>
+    </div>
+    <div>
+      <strong style="font-weight:bold; padding:40px 0 20px 0; display: block;">テキストの影をグラデーションではなくパスで処理</strong>
+      <p style="padding-bottom:20px;">テキストの影をパスデータに変更したので<br>実体のサイズがあり影部分は切れない。<br> safariでボケない </p>
+      <p style="border: dashed 3px #2200ff;">
+        <img src="../assets/images/test3.svg">
+      </p>
+    </div>
+    <div>
+      <strong style="font-weight:bold; padding:40px 0 20px 0; display: block;">テキストの影削除</strong>
+      <p style="padding-bottom:20px;">テキストの影（グラデーション処理）を削除<br> safariでボケない </p>
+      <p style="border: dashed 3px #2200ff;">
+        <img src="../assets/images/test2.svg">
+      </p>
+    </div>
+    <div>
+      <strong style="font-weight:bold; padding:40px 0 20px 0; display: block;">テキストの影がグラデーション処理、<br> 一回ライブラリに格納し再配置</strong>
+      <p style="padding-bottom:20px;">テキストの影がグラデーション処理のため、<br>実体のサイズを持たないので影部分が切れる。<br> safariでボケない </p>
+      <p style="border: dashed 3px #2200ff;">
+        <img src="../assets/images/test4.svg">
+      </p>
+    </div>
+  </main>
+  <!--<script src="./assets/js/app3.js?1656642949875"></script>-->
+</body>
+</html>

@@ -6,6 +6,7 @@ img{
     &main {
         width: 100vw;
         font-size: 10px;
+        font-family: YakuHanJP,"Noto Sans JP","游ゴシック","ヒラギノ角ゴ Pro",sans-serif;
         @include media( pc ){
             width: 100vw;
             font-size: 10px;
@@ -550,4 +551,139 @@ img{
         }
     }
 
+
+    &cont6Box {
+        z-index: 50;
+        position: relative;
+        background: url(../images/pokenatsu22/gift_bg.png) top left;
+        background-size: 100%;
+        height: getSize(2171)+'vw';
+        @include media( pc ){
+            width: getPcSize(750)+'px';
+            height: getPcSize(2171)+'px';
+            margin: 0 auto 0 auto;
+        }
+    }
+    &gift_title {
+        position: absolute;
+        width: getSize(620)+'vw';
+        height: auto;
+        top: getSize(78)+'vw';
+        left: getSize(66)+'vw';
+        @include media( pc ){
+            width: getPcSize(620)+'px';
+            height: auto;
+            top: getPcSize(78)+'px';
+            left: getPcSize(66)+'px';
+        }
+    }
+    &gift_kv {
+        position: absolute;
+        width: getSize(715)+'vw';
+        height: auto;
+        top: getSize(213)+'vw';
+        left: getSize(18)+'vw';
+        @include media( pc ){
+            width: getPcSize(715)+'px';
+            height: auto;
+            top: getPcSize(213)+'px';
+            left: getPcSize(18)+'px';
+        }
+    }
+    &gift_commentBox {
+        position: absolute;
+        background: #EC6F00;
+        width: 100%;
+        height: auto;
+        top: getSize(851)+'vw';
+        left: getSize(0)+'vw';
+        border-radius: 4vw;
+        padding:getSize(56vw) getSize(45vw) getSize(36vw);
+        @include media( pc ){
+            width: 100%;
+            height: auto;
+            top: getPcSize(851)+'px';
+            left: getPcSize(0)+'px';
+            border-radius: 20px;
+            padding:getPcSize(56px) getPcSize(45px) getPcSize(36px);
+        }
+    }
+    &gift_commentText {
+        margin-bottom: getSize(67)+'vw';
+        font-size: getSize(26)+'vw';
+        line-height: getSize(45)+'vw';
+        color: #fff;
+        letter-spacing: -0.04em;
+        text-align: justify;
+        @include media( pc ){
+            margin-bottom: getPcSize(67)+'px';
+            font-size: getPcSize(26)+'px';
+            line-height: getPcSize(45)+'px';
+            letter-spacing: -0.02em;
+        }
+        & strong {
+            font-weight: bold;
+        }
+    }
+    &gift_comment {
+        margin-bottom: getSize(36)+'vw';
+        @include media( pc ){
+            margin-bottom: getPcSize(36)+'px';
+        }
+    }
+    &gift_sub {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: getSize(1593)+'vw';
+        left: getSize(0)+'vw';
+        @include media( pc ){
+            top: getPcSize(1593)+'px';
+            left: getPcSize(0)+'px';
+        }
+    }
+    &gift_sub_comment {
+        width: getSize(622)+'vw';
+        height: auto;
+        margin: 0 0 getSize(25vw) getSize(59vw);
+        display: block;
+        @include media( pc ){
+            width: getPcSize(622)+'px';
+            margin: 0 0 getPcSize(25px) getPcSize(59px);
+        }
+    }
+    &gift_sub_kv {
+        width: getSize(683)+'vw';
+        height: auto;
+        margin: 0 0 getSize(32vw) getSize(34vw);
+        display: block;
+        @include media( pc ){
+            width: getPcSize(683)+'px';
+            margin: 0 0 getPcSize(32px) getPcSize(34px);
+        }
+    }
+    &gift_sub_twitter {
+        position: relative;
+        width: getSize(600)+'vw';
+        height: getSize(102)+'vw';
+        margin: 0 auto;
+        display: block;
+        @include media( pc ){
+            width: getPcSize(600)+'px';
+            height: getPcSize(102)+'px';
+        }
+        & img {
+            position: absolute;
+            width: getSize(631)+'vw';
+            height: getSize(133)+'vw';
+            top: getSize(-15)+'vw';
+            left: getSize(-15)+'vw';
+            @include media( pc ){
+                width: getPcSize(631)+'px';
+                height: getPcSize(133)+'px';
+                top: getPcSize(-15)+'px';
+                left: getPcSize(-15)+'px';
+            }
+        }
+    }
 }
