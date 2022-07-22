@@ -11,18 +11,18 @@ const srcs = [ //画像リスト
     '../assets/images/sample.jpg',
     '../assets/images/sample2.jpg',
 ];
-const imgs = [];//画像用配列
-for (let i in srcs) { //配列の中に画像格納
+let imgs = [];//画像用配列
+for (var i in srcs) { //配列の中に画像格納
     imgs[i] = new Image();
     imgs[i].src = srcs[i];
 }
 let loadCount = 1;//呼び出し用番号設定
-for (let i in imgs) { //画像配置
-    imgs[i].addEventListener('load', () => {
+for (var i in imgs) { //画像配置
+    imgs[i].addEventListener('load', function() {
         if (loadCount == imgs.length) {
             let x = 0;//画像の表示x軸初期設定
             let y = 0;//画像の表示x軸初期設定
-            for (let j in imgs) {
+            for (var j in imgs) {
                 c.drawImage(imgs[j], x, y, 1200, 900);//呼び出された画像設定
                 x += 0;
                 y += 900;
@@ -33,17 +33,17 @@ for (let i in imgs) { //画像配置
 }
 
 //dataURL（base64）からblobへ変換
-const toBlob = (base64) => {
+function toBlob(base64) {
 	const byteString = atob(base64.replace(/^.*,/, '')); //base64をデコード
-	const content = new Uint8Array(byteString.length); //8ビット符号なし整数値の配列を生成
+	const content = new Uint8Array(byteString.length); //8 ビット符号なし整数値の配列を生成
 	for (var i = 0; i < byteString.length; i++) {
 		content[i] = byteString.charCodeAt(i);
 	}
 	const blob = new Blob([content], {type: 'image/png'}); //blobを作成
 	return blob;
-};
+}
 
-makeimage.addEventListener('click', () => {//画像ダウンロードのパス作成
+makeimage.addEventListener('click', function(){//画像ダウンロードのパス作成
     const dataURLlink = canvas.toDataURL('image/png');//jpgの場合('image/jpeg', 0.85)第二引数で圧縮率の設定
     const blob = toBlob(dataURLlink);//DataURLをblobに変換
     const blobLink = URL.createObjectURL( blob );//blob情報をリンクに変換

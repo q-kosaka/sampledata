@@ -1,0 +1,71 @@
+<%_
+  var data = {
+    url: '',/* スラッシュ始まりのドメイン以下URL ( TOPの場合は空文字で ) */
+    name: 'top',/* bodyタグにつくid名 */
+    title:'',/* TOPの場合は空文字で */
+    description:'',/* TOPの場合は空文字で */
+    keyword:'',/* TOPの場合は空文字で */
+    device: 'pc', 
+    current:'./'   
+  } 
+_%>  
+<%_ data.asset = function(){ _%> 
+<%_ }; data.content = function(){ _%>
+<main class="lp-main">
+    <section class="lp-mvBox">
+      <div class="lp-mvContent">
+        <div class="lp-logoBox">
+            <img src="./assets/images/aeontw/waon_logo.svg" class="lp-logoL">
+            <img src="./assets/images/aeontw/logo_x.svg" class="lp-logoC">
+            <img src="./assets/images/aeontw/sme_logo.png" class="lp-logoR">
+        </div>
+        <h1 class="lp-mvH1">
+          <img src="./assets/images/aeontw/mv_ribbon.svg" class="lp-ribbon">
+          <img src="./assets/images/aeontw/mv_text01.png" class="lp-mvT01">
+        </h1>
+
+        <div class="lp-mvCardBox">
+          <img src="./assets/images/aeontw/mv_text02.png" class="lp-mvT02">
+          <img src="./assets/images/aeontw/mv_card.png" class="lp-mvCard">
+          <img src="./assets/images/aeontw/mv_text03.svg" class="lp-mvT03">
+        </div>
+
+        <p class="lp-mvCaption"><img src="./assets/images/aeontw/mv_text04.svg" class="lp-mvT04"></p>
+      </div>
+    </section>
+    <div class="lp-Period">
+
+    </div>
+
+</main>
+<ul class="check">
+  <% for(let i = 0; i < 100; i++){ %>
+    <li></li>
+  <% } %>
+  </ul>
+<div class="checkdiv">
+  <% for(let i = 0; i < 100; i++){ %>
+    <p></p>
+  <% } %>
+</div>
+
+<div>
+  <details>
+    <summary>
+      ここに質問タイトルが入ります。
+    </summary>
+    <div>ここに回答が入ります。</div>
+  </details>
+</div>
+<form action="" method="post">
+  ユーザーID:
+  <input type="text" name="userid" pattern="^[0-9A-Za-z]+$"> ※半角英数<br>
+  <input type="submit" value="ログイン">
+</form>
+<%_ } _%> 
+<%_ /* 以下includeファイル */ _%>
+<%- include( data.current + 'includes/_headaeon_' + data.device , { data : data } ); %>
+<%- data.content(); %>
+<%- include( data.current + 'includes/_footer31_' + data.device , { data : data } ); %>
+<%- data.asset(); %>
+<%- include( data.current + 'includes/_foot_' + data.device , { data : data } ); %>

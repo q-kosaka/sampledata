@@ -20,9 +20,9 @@ for (var i in srcs) {
 
 var loadCount = 1; //呼び出し用番号設定
 
-for (var _i in imgs) {
+for (var i in imgs) {
   //画像配置
-  imgs[_i].addEventListener('load', function () {
+  imgs[i].addEventListener('load', function () {
     if (loadCount == imgs.length) {
       var x = 0; //画像の表示x軸初期設定
 
@@ -41,10 +41,10 @@ for (var _i in imgs) {
 } //dataURL（base64）からblobへ変換
 
 
-var toBlob = function toBlob(base64) {
+function toBlob(base64) {
   var byteString = atob(base64.replace(/^.*,/, '')); //base64をデコード
 
-  var content = new Uint8Array(byteString.length); //8ビット符号なし整数値の配列を生成
+  var content = new Uint8Array(byteString.length); //8 ビット符号なし整数値の配列を生成
 
   for (var i = 0; i < byteString.length; i++) {
     content[i] = byteString.charCodeAt(i);
@@ -55,7 +55,7 @@ var toBlob = function toBlob(base64) {
   }); //blobを作成
 
   return blob;
-};
+}
 
 makeimage.addEventListener('click', function () {
   //画像ダウンロードのパス作成

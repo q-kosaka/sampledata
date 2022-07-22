@@ -1,0 +1,203 @@
+.lp- {
+    &mvBox {
+        background: url(../images/aeontw/bg_sp.png) center center;
+        background-size: cover;
+        height: getSize(921)+'vw';
+        @include media( pc ){
+            background: url(../images/aeontw/bg_pc.png) center center;
+            background-size: auto;
+            width: 100%;
+            height:467px;
+            margin: 0 auto;
+        }
+        @media screen and (min-width:1200px) {
+            background-size: cover;
+        } 
+    }
+    &mvContent {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: getSize(17.7468)+'vw';
+        @include media( pc ){
+            width: 1200px;
+            height:467px;
+            position: relative;
+            padding: 0;
+        }
+    }
+    &logoBox {
+        width: getSize(449.7618)+'vw';
+        height: getSize(110.7)+'vw';
+        margin: 0 auto;
+        position: relative;
+        @include media( pc ){
+            position: absolute;
+            width: 333.1569px;
+            height: 82px;
+            margin: 0 0 0 0;
+            top: 60px;
+            left: 207px;
+        }
+    }
+    &logoL {
+        width: getSize(223.5949)+'vw';
+        position: absolute;
+        top: getSize(20.1437)+'vw';
+        left: 0;
+        @include media( pc ){
+            width: 165px;
+            top: 17px;
+        }
+    }
+    &logoC {
+        width: getSize(38.0916)+'vw';
+        position: absolute;
+        top: getSize(41.9304)+'vw';
+        left: getSize(246.8058)+'vw';
+        @include media( pc ){
+            width: 28px;
+            top: 29px;
+            left: 181px;
+        }
+    }
+    &logoR {
+        width: getSize(150)+'vw';
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include media( pc ){
+            width: 111px;
+        }
+    }
+
+    &mvH1 {
+        padding-top: getSize(29)+'vw';
+        text-align: center;
+        @include media( pc ){
+            padding-top:0;
+            position: absolute;
+            top:166px;
+            left:58px;
+        }
+    }
+    &ribbon {
+        display: block;
+        width: getSize(536.1918)+'vw';
+        margin: 0 auto;
+        @include media( pc ){
+            width: 470px;
+        }
+    }
+    &mvT01 {
+        width: getSize(715)+'vw';
+        margin: getSize(-15)+'vw' auto 0 getSize(4)+'vw';
+        @include media( pc ){
+            width: 637px;
+            margin: -14px auto 0;
+        }
+    }
+    &mvCardBox {
+        margin: getSize(-22)+'vw' auto 0;
+        text-align: center;
+        @include media( pc ){
+            margin: 0;
+            position: absolute;
+            top:53px;
+            left:699px;
+        }
+    }
+    &mvT02 {
+        display: block;
+        width: getSize(670)+'vw';
+        margin: 0 auto;
+        @include media( pc ){
+            width: 443px;
+        }
+    }
+    &mvCard {
+        display: block;
+        width: getSize(547)+'vw';
+        margin: getSize(-51)+'vw' auto 0;
+        @include media( pc ){
+            width: 453px;
+            margin: -39px auto 0;
+        }
+    }
+    &mvT03 {
+        display: block;
+        width: getSize(507.2314)+'vw';
+        margin: getSize(-9)+'vw' auto 0;
+        @include media( pc ){
+            width: 313px;
+            margin: -10px auto 0;
+        }
+    }
+    &mvCaption {
+        width: 100%;
+        margin-top: getSize(12)+'vw';
+        padding-right: getSize(14)+'vw';
+        text-align: center;
+        @include media( pc ){
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right:11px;
+            bottom:10px;
+            text-align: right;
+        }
+    }
+    &mvT04 {
+        display: block;
+        width: getSize(213.1611)+'vw';
+        margin: 0 auto;
+        @include media( pc ){
+            width: 139.1152px;
+            display: inline-block;
+        }
+    }
+    &Period {
+        width: 100%;
+        height: getSize(76)+'vw';
+        background: #E9528E;
+        @include media( pc ){
+            height: 50px;
+        }
+    }
+}
+.check {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:15px 0 25px 0;
+    border-top:solid 1px #f44;
+    & li {
+        width: 1vw;
+        height: 10vw;
+        background-color:darkcyan;
+    }
+
+    & li:nth-child(odd) {
+        background-color:darkorange;
+    }
+}
+
+.checkdiv {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:15px 0 25px 0;
+    border-top:solid 1px #f44;
+    & p {
+        width: 1vw;
+        height: 10vw;
+        background-color:darkorange;
+    }
+
+    & p:nth-child(odd) {
+        background-color:darkcyan;
+    }
+}
+
+summary {
+    cursor: pointer;
+}

@@ -430,6 +430,42 @@ img{
         }
     }
 
+    &set_text {
+        width: getSize(660)+'vw';
+        font-size: getSize(26)+'vw';
+        line-height: getSize(46)+'vw';
+        white-space: nowrap;
+        text-align: justify;
+        margin: 0 auto;
+        padding: 5% 0;
+        @include media( pc ){
+            width: getPcSize(660)+'px';
+            font-size: getPcSize(26)+'px';
+            line-height: getPcSize(46)+'px';
+        }
+        & span {
+            letter-spacing: -0.22vw;
+            white-space: nowrap;
+            @include media( pc ){
+                letter-spacing: -0.22px;
+            }
+        }
+    }
+    &set_box {
+        width: getSize(660)+'vw';
+        height: getSize(86)+'vw';
+        font-size: getSize(26)+'vw';
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 10vw;
+        @include media( pc ){
+            width: getPcSize(660)+'px';
+            height: getPcSize(86)+'px';
+            font-size: getPcSize(26)+'px';
+            border-radius: 100px;
+        }
+    }
+
     &cont3Box {
         z-index: 20;
         position: relative;
