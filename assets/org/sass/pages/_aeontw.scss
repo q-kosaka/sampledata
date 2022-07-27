@@ -3,6 +3,7 @@
         background: url(../images/aeontw/bg_sp.png) center center;
         background-size: cover;
         height: getSize(921)+'vw';
+        //height: 100svh; /* iphone等のメインビジュアルを100%表示したい時に使えるが古いと100vhしか使えないので併記する */
         @include media( pc ){
             background: url(../images/aeontw/bg_pc.png) center center;
             background-size: auto;
@@ -200,4 +201,30 @@
 
 summary {
     cursor: pointer;
+}
+
+.gridArea {
+    width: 100%;
+}
+
+.gridBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    @include media( pc ){
+        grid-template-columns: 1fr 1fr 1fr;
+//        grid-template-columns: minmax(150px, 25%) 1fr 1fr;
+    }
+}
+
+.gridBox li {
+    height: calc(100svh - 132.9333vw);
+    background: #fee;
+    &:nth-child(even){
+        background: #efe;
+    }
+
+    @include media( pc ){
+        height: 70px;
+    }
 }

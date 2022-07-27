@@ -38,7 +38,7 @@ _%>
     </div>
 
 </main>
-<ul class="check">
+<!--<ul class="check">
   <% for(let i = 0; i < 100; i++){ %>
     <li></li>
   <% } %>
@@ -61,7 +61,16 @@ _%>
   ユーザーID:
   <input type="text" name="userid" pattern="^[0-9A-Za-z]+$"> ※半角英数<br>
   <input type="submit" value="ログイン">
-</form>
+</form>-->
+
+<div class="gridArea">
+  <ul class="gridBox">
+    <li>aaa</li>
+    <li>bbb</li>
+    <li>ccc</li>
+  </ul>
+</div>
+
 <%_ } _%> 
 <%_ /* 以下includeファイル */ _%>
 <%- include( data.current + 'includes/_headaeon_' + data.device , { data : data } ); %>
