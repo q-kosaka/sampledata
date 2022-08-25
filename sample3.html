@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=yes">
+  <title>サイトタイトル</title>
+  <link rel="canonical" href="https://testdata.localdev.com">
+  <meta name="description" content="サイトデスクリプション">
+  <meta name="keywords" content="サイトキーワード">
+  <link rel="stylesheet" href="./assets/css/styleaeon.css?1661325777001">
+</head>
+<body id="top">
+  <style>
+    body {
+      background: #afafaf;
+    }
+
+    .box {
+      position: relative;
+      width: 92.266vw;
+      margin: 0 auto 10vw auto;
+      filter: blur(0);
+    }
+
+    .box::before {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      content: '';
+      top: 1.866vw;
+      left: 2.266vw;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10.933vw), calc(100% - 10.933vw) 100%, 0 100%);
+    }
+
+    .box_inner {
+      width: 100%;
+      height: 95vh;
+      padding: 30% 5%;
+      box-sizing: border-box;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10.933vw), calc(100% - 10.933vw) 100%, 0 100%);
+      background: #FFF3E4;
+      background-image:
+        repeating-linear-gradient(90deg, rgba(232, 177, 68, 0.15), rgba(232, 177, 68, 0.15) 1px, transparent 1px, transparent 3vw),
+        repeating-linear-gradient(0deg, rgba(232, 177, 68, 0.15), rgba(232, 177, 68, 0.15) 1px, #FFF3E4 1px, #FFF3E4 3vw);
+    }
+
+    .box_inner::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10.933vw;
+      height: 10.933vw;
+      border: 5.4665vw solid #E8B144;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      box-sizing: border-box;
+    }
+  </style>
+  <div class="box">
+    <div class="box_inner">
+      <p>コンテンツ</p>
+    </div>
+  </div>
+  <!--<script src="./assets/js/app3.js?1661325777001"></script>-->
+</body>
+</html>

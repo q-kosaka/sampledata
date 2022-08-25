@@ -1,0 +1,67 @@
+<%_
+  var data = {
+    url: '',/* スラッシュ始まりのドメイン以下URL ( TOPの場合は空文字で ) */
+    name: 'top',/* bodyタグにつくid名 */
+    title:'',/* TOPの場合は空文字で */
+    description:'',/* TOPの場合は空文字で */
+    keyword:'',/* TOPの場合は空文字で */
+    device: 'pc', 
+    current:'./'   
+  } 
+_%>  
+<%_ data.asset = function(){ _%> 
+<%_ }; data.content = function(){ _%>
+
+<div class="gridArea">
+  <ul class="gridBox">
+    <li>aaa</li>
+    <li>bbb</li>
+    <li>ccc</li>
+  </ul>
+</div>
+
+<div style="text-align: center; font-family:'Helvetica Neue',
+Arial,
+'Hiragino Kaku Gothic ProN',
+'Hiragino Sans',
+Meiryo,
+sans-serif;">
+  <div style="font-size:5vw; margin-bottom: 10px;">
+    <h2>font-size:5vw;</h2>
+    <div>あいうえお</div>
+    <div>アイウエオ</div>
+    <div>愛意羽絵尾</div>
+    <div>AIUEO</div>
+    <div>ＡＩＵＥＯ</div>
+    <div>aiueo</div>
+    <div>ａｉｕｅｏ</div>
+  </div>
+  <div style="font-size:2rem; margin-bottom: 10px;">
+    <h2>font-size:2rem;</h2>
+    <div>あいうえお</div>
+    <div>アイウエオ</div>
+    <div>愛意羽絵尾</div>
+    <div>AIUEO</div>
+    <div>ＡＩＵＥＯ</div>
+    <div>aiueo</div>
+    <div>ａｉｕｅｏ</div>
+  </div>
+  <div style="font-size:20px; margin-bottom: 10px;">
+    <h2>font-size:20px;</h2>
+    <div>あいうえお</div>
+    <div>アイウエオ</div>
+    <div>愛意羽絵尾</div>
+    <div>AIUEO</div>
+    <div>ＡＩＵＥＯ</div>
+    <div>aiueo</div>
+    <div>ａｉｕｅｏ</div>
+  </div>
+</div>
+
+<%_ } _%> 
+<%_ /* 以下includeファイル */ _%>
+<%- include( data.current + 'includes/_headaeon_' + data.device , { data : data } ); %>
+<%- data.content(); %>
+<%- include( data.current + 'includes/_footer31_' + data.device , { data : data } ); %>
+<%- data.asset(); %>
+<%- include( data.current + 'includes/_foot_' + data.device , { data : data } ); %>

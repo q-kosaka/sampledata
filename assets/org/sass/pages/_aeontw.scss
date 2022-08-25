@@ -1,8 +1,14 @@
 .lp- {
+    &main {
+        @include media( pc ){
+            min-width: 1200px;
+        }
+    }
     &mvBox {
         background: url(../images/aeontw/bg_sp.png) center center;
         background-size: cover;
         height: getSize(921)+'vw';
+        //height: 100vh;
         //height: 100svh; /* iphone等のメインビジュアルを100%表示したい時に使えるが古いと100vhしか使えないので併記する */
         @include media( pc ){
             background: url(../images/aeontw/bg_pc.png) center center;
@@ -160,11 +166,421 @@
         width: 100%;
         height: getSize(76)+'vw';
         background: #E9528E;
+        display: grid;
+        place-content: center;
         @include media( pc ){
             height: 50px;
         }
     }
+    &cpday {
+        height: getSize(36.847)+'vw';
+        @include media( pc ){
+            height: 24.2462px;
+        }
+    }
+    &cont {
+        background: url(../images/aeontw/repeat.jpg);
+        background-size: 25%;
+        min-height: 100vh;
+        @include media( pc ){
+            background-size: 99px;
+        }
+    }
+    &cont1Box {
+        margin: 0 auto;
+        @include media( pc ){
+            width: 1090px;
+        }
+    }
+    &contStar {
+        display: grid;
+        place-content: center;
+    }
+    &star {
+        width: 100vw;
+        height: getSize(190)+'vw';
+        @include media( pc ){
+            width: 1000px;
+            height: 120px;
+        }
+    }
+    &cont1Title {
+        display: grid;
+        place-content: center;
+    }
+    &text01 {
+        margin-top:getSize(-69.1412)+'vw';
+        width:getSize(655)+'vw';
+        @include media( pc ){
+            width:873px;
+            height: 100px;
+            margin-top:-14px;
+        }
+    }
+    &cont1BoxTxt {
+        width: getSize(680)+'vw';
+        margin: getSize(28.5625)+'vw' auto 0 auto;
+        position: relative;
+        padding-top:getSize(56.4375)+'vw';
+        padding-bottom:getSize(56.4375)+'vw';
+        color: #fff;
+        font-size: getSize(28)+'vw';
+        line-height: getSize(45)+'vw';
+        font-feature-settings:"palt" 1,"swsh" 1;
+        text-align: justify;
+        &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: getSize(22.4444)+'vw';
+            background: url(../images/aeontw/line_up_sp.svg);
+            top: 0;
+            left: 0;
+            @include media( pc ){
+                height: 13.5px;
+                background: url(../images/aeontw/line_up_pc.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: getSize(22.4444)+'vw';
+            background: url(../images/aeontw/line_down_sp.svg);
+            bottom: 0;
+            left: 0;
+            @include media( pc ){
+                height: 13.5px;
+                background: url(../images/aeontw/line_down_pc.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        @include media( pc ){
+            width: 1082.1902px;
+            margin: 15px auto 0 auto;
+            padding:20px 48px;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }
+        & a{
+            color: #fff;
+            text-decoration-line: underline;
+            text-underline-position:under;
+        }
+    }
+    &cont1bg{
+        background: url(../images/aeontw/bgpink_sp.png);
+        background-size: 100%;
+        width: getSize(722)+'vw';
+        height: getSize(1198)+'vw';
+        margin: getSize(47)+'vw' auto 0 auto;
+        padding-top: getSize(119)+'vw';
+        @include media( pc ){
+            background: url(../images/aeontw/bgpink_pc.png);
+            width: 1086px;
+            height: 480px;
+            margin-top: 44px;
+            padding-top: 88px;
+        }
+    }
+    &cont1subT {
+        display: block;
+        position: relative;
+        width: getSize(560)+'vw';
+        height: getSize(50)+'vw';
+        line-height: getSize(50)+'vw';
+        margin: 0 auto;
+        text-align: center;
+        color: #1181BF;
+        box-sizing: border-box;
+        background: url(../images/aeontw/ribbon1_sp.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-size: getSize(26)+'vw';
+        /*&::before, &::after{
+            position: absolute;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            border-color: #f57a78 transparent;
+            border-style: solid;
+            content: '';
+        }
+        &::before {
+            left: -7px;
+            border-width: 18.5px 0px 18.5px 7px;
+        }
+          
+        &::after {
+            right: -7px;
+            border-width: 18.5px 7px 18.5px 0px;
+        }*/
+        @include media( pc ){
+            background: url(../images/aeontw/ribbon1_pc.svg);
+            width: 950px;
+            height: 37px;
+            line-height: 37px;
+            font-size: 2rem;
+        }
+    }
+    &cont1list1 {
+        display: grid;
+        grid-template-columns: getSize(560)+'vw';
+        width: getSize(560)+'vw';
+        margin: getSize(34)+'vw' auto 0 auto;
+        text-align: center;
+        @include media( pc ){
+            grid-template-columns: 263px 209px 478px;
+            width: 950px;
+            margin: 21px auto 0;
+        }
+    }
+    &conte1Item{
+        position: relative;
+        display: flex;
+        @include media( pc ){
+            display: block;
+        }
+    }
+    &conte1Item:first-child{
+        margin-bottom: getSize(50)+'vw';
+        @include media( pc ){
+            margin-right: 54px;
+            margin-bottom: 0;
+            &::after {
+                position: absolute;
+                content: "";
+                background: url(../images/aeontw/arrow_pc.svg);
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 82px;
+                top: 0;
+                right: -30px;
+            }
+        }
+    }
+    &conte1Item:last-child{
+        margin-top: getSize(60)+'vw';
+        @include media( pc ){
+            margin-top: 0;
+            margin-left: 59px;
+            &::after {
+                position: absolute;
+                content: "";
+                background: url(../images/aeontw/arrow_pc.svg);
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 82px;
+                top: 0;
+                left: -30px;
+            }
+        }
+    }
+    &conte1Num{
+        background: #fff;
+        display: block;
+        width: getSize(35)+'vw';
+        height: getSize(35)+'vw';
+        font-size: getSize(26)+'vw';
+        line-height: getSize(35)+'vw';
+        border-radius: 100%;
+        margin-right: getSize(17)+'vw';
+        @include media( pc ){
+            border-radius: 10px;
+            font-size: 1.1rem;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 17px;
+            margin-right: 0;
+        }
+    }
+
+    &conte1Item:last-child .lp-conte1Num{
+        border-radius: 10vw;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        @include media( pc ){
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+    &conte1Text{
+        color: #fff;
+        font-feature-settings:"palt" 1,"swsh" 1;
+        font-size: getSize(28)+'vw';
+        line-height: getSize(35)+'vw';
+        text-align: left;
+        @include media( pc ){
+            text-align: center;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+        }
+        & a{
+            color: #fff;
+            text-decoration-line: underline;
+            text-underline-position:under;
+        }
+    }
+    &conte1Item:last-child .lp-conte1Text{
+        line-height: getSize(40)+'vw';
+        @include media( pc ){
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+    &textB {
+        font-size: getSize(34)+'vw';
+        @include media( pc ){
+            font-size: 2.2rem;
+        }
+    }
+    &textS {
+        font-size: getSize(28)+'vw';
+        @include media( pc ){
+            font-size: 1.7rem;
+        }
+    }
+    &cont1list2 {
+        display: grid;
+        grid-template-columns: getSize(560)+'vw';
+        width: getSize(560)+'vw';
+        margin: 0 auto;
+        text-align: center;
+        @include media( pc ){
+            grid-template-columns: 300px 1fr 300px;
+            width: 950px;
+            margin: 46px auto 0;
+        }
+        & .lp-conte1Text{
+            text-align: center;
+        }
+    }
+    &conte1Item2{
+        position: relative;
+        @include media( pc ){
+        }
+    }
+
+    &conte1Item2:nth-child(2){
+        @include media( pc ){
+            margin: 0 25px;
+        }
+    }
+    &conte1Item2T {
+        width: getSize(560)+'vw';
+        height: getSize(50)+'vw';
+        line-height: getSize(50)+'vw';
+        margin: 0 auto;
+        text-align: center;
+        color: #1181BF;
+        box-sizing: border-box;
+        background: url(../images/aeontw/ribbon1_sp.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        font-size: getSize(26)+'vw';
+        @include media( pc ){
+            background: url(../images/aeontw/ribbon2_pc.svg);
+            width: 300px;
+            height: 37px;
+            line-height: 37px;
+            font-size: 2rem;
+        }
+    }
+    li:first-of-type &conte1Item2T {
+        margin-top: getSize(55)+'vw';
+        margin-bottom: getSize(27)+'vw';
+        @include media( pc ){
+            margin-top: 0;
+            margin-bottom: 21px;
+        }
+    }
+    li:nth-of-type(2) &conte1Item2T {
+        margin-top: getSize(50)+'vw';
+        margin-bottom: getSize(32)+'vw';
+        @include media( pc ){
+            margin-top: 0;
+            margin-bottom: 21px;
+        }
+    }
+    li:last-of-type &conte1Item2T {
+        margin-top: getSize(44)+'vw';
+        margin-bottom: getSize(24)+'vw';
+        @include media( pc ){
+            margin-top: 0;
+            margin-bottom: 21px;
+        }
+    }
+    &btnw {
+        background: #fff;
+        width: getSize(560)+'vw';
+        height: getSize(50)+'vw';
+        line-height: getSize(50)+'vw';
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        border-radius: 100vw;
+        font-size: 1.715rem;
+        @include media( pc ){
+            width: 406px;
+            height: 50px;
+            line-height: 50px;
+            margin: 38px auto 0 auto;
+            border-radius: 100px;
+            font-size: 1.715rem;
+        }
+    }
 }
+
+@include media( sp ){
+    .spNone {
+        display: none;
+    }
+}
+@include media( pc ){
+    .pcNone {
+        display: none;
+    }    
+}
+
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template:
+      repeat(2, auto) /
+      repeat(3, 1fr);
+    //grid-template:1fr 1fr 1fr;
+    gap: 10px 20px;
+    grid-auto-flow: column;
+    & img{
+        width: 100%;
+    }
+    & a {
+        display: contents;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .check {
     width: 100%;
     display: flex;
